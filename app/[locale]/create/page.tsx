@@ -24,15 +24,57 @@ export default function CreatePage() {
 
   const [selectedMood, setSelectedMood] = useState<string | null>(null);
   const [recipient, setRecipient] = useState<'self' | 'other'>('self');
+  const [message, setMessage] = useState('');
   const [messageLength, setMessageLength] = useState(0);
+  const [title, setTitle] = useState('');
   const [titleLength, setTitleLength] = useState(0);
+  const [senderEmail, setSenderEmail] = useState('');
+  const [recipientEmail, setRecipientEmail] = useState('');
+  const [openDate, setOpenDate] = useState('');
+  const [openTime, setOpenTime] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async () => {
+    if (!message || !senderEmail || !openDate || !openTime) {
+      alert('Please fill in all required fields.');
+      return;
+    }
+    setLoading(true);
+    try {
+      const openDateTime = new Date(`${openDate}T${openTime}:00`).toISOString();
+      const res = await fetch('/api/create-checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          message_text: message,
+          title: title || undefined,
+          mood: selectedMood || undefined,
+          recipient_email: recipient === 'self' ? senderEmail : recipientEmail,
+          sender_email: senderEmail,
+          open_date: openDateTime,
+          delivery_method: 'email',
+          locale,
+        }),
+      });
+      const data = await res.json();
+      if (data.url) {
+        window.location.href = data.url;
+      } else {
+        alert('Something went wrong. Please try again.');
+      }
+    } catch {
+      alert('Something went wrong. Please try again.');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <main style={{ minHeight: '100vh', background: '#080808', color: '#fff' }}>
       <style>{`
         .create-container { max-width: 680px; margin: 0 auto; padding: 3rem 2rem 5rem; }
         .field-label { font-size: 11px; letter-spacing: 0.35em; text-transform: uppercase; color: rgba(255,255,255,0.4); display: block; margin-bottom: 0.875rem; }
-        .text-input { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 16px 18px; color: #fff; font-size: 1.05rem; outline: none; font-family: 'Cormorant Garamond', serif; transition: border-color 0.3s; color-scheme: dark; }
+        .text-input { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 16px 18px; color: #fff; font-size: 1.05rem; outline: none; font-family: 'Cormorant Garamond', serif; transition: border-color 0.3s; color-scheme: dark; box-sizing: border-box; }
         .text-input:focus { border-color: rgba(201,149,108,0.5); }
         .text-input::placeholder { color: rgba(255,255,255,0.2); }
         .recipient-btn { flex: 1; padding: 16px; text-align: center; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; cursor: pointer; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.5); font-family: 'Cormorant Garamond', serif; transition: all 0.3s; }
@@ -43,10 +85,10 @@ export default function CreatePage() {
         @media (max-width: 480px) { .date-grid { grid-template-columns: 1fr; } }
         .seal-btn { width: 100%; background: #C9956C; color: #080808; padding: 20px; border-radius: 4px; border: none; cursor: pointer; font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 500; font-family: 'Cormorant Garamond', serif; transition: opacity 0.3s; }
         .seal-btn:hover { opacity: 0.88; }
+        .seal-btn:disabled { cursor: not-allowed; }
         .char-counter { font-size: 11px; letter-spacing: 0.1em; transition: color 0.3s; }
       `}</style>
 
-      {/* Nav */}
       <nav style={{ display: 'flex', alignItems: 'center', padding: '1.8rem 2.5rem', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
         <Link href={`/${locale}`} style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>
           ← The Unsend Project
@@ -55,7 +97,7 @@ export default function CreatePage() {
 
       <div className="create-container">
 
-        {/* Progress bar */}
+        {/* Progress */}
         <div style={{ display: 'flex', gap: '8px', marginBottom: '2.5rem' }}>
           {[1,2,3].map((s) => (
             <div key={s} style={{ height: '2px', flex: 1, background: s === 1 ? '#C9956C' : 'rgba(255,255,255,0.1)', borderRadius: '2px' }} />
@@ -69,7 +111,7 @@ export default function CreatePage() {
           {t("create.title")}
         </h1>
 
-        {/* Mood selector */}
+        {/* Mood */}
         <div style={{ marginBottom: '2.5rem' }}>
           <label className="field-label">{t("create.mood_label")}</label>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.75rem' }}>
@@ -77,7 +119,7 @@ export default function CreatePage() {
               <div
                 key={mood.key}
                 className={`mood-pill${selectedMood === mood.key ? ' active' : ''}`}
-                onClick={() => setSelectedMood(mood.key)}
+                onClick={() => setSelectedMood(selectedMood === mood.key ? null : mood.key)}
               >
                 <span style={{ color: mood.color, fontSize: '14px' }}>{mood.icon}</span>
                 <span style={{ fontSize: '11px', letterSpacing: '0.15em', textTransform: 'uppercase', color: selectedMood === mood.key ? '#C9956C' : 'rgba(255,255,255,0.6)' }}>
@@ -101,7 +143,8 @@ export default function CreatePage() {
             className="text-input"
             placeholder={t("create.title_placeholder")}
             maxLength={100}
-            onChange={(e) => setTitleLength(e.target.value.length)}
+            value={title}
+            onChange={(e) => { setTitle(e.target.value); setTitleLength(e.target.value.length); }}
           />
         </div>
 
@@ -118,8 +161,9 @@ export default function CreatePage() {
             placeholder={t("create.message_placeholder")}
             rows={9}
             maxLength={2000}
+            value={message}
             style={{ resize: 'vertical', lineHeight: 1.8 }}
-            onChange={(e) => setMessageLength(e.target.value.length)}
+            onChange={(e) => { setMessage(e.target.value); setMessageLength(e.target.value.length); }}
           />
         </div>
 
@@ -142,16 +186,29 @@ export default function CreatePage() {
           </div>
         </div>
 
-        {/* Email fields */}
+        {/* Sender email */}
         <div style={{ marginBottom: '1.5rem' }}>
           <label className="field-label">{t("create.your_email_label")}</label>
-          <input type="email" className="text-input" placeholder="your@email.com" />
+          <input
+            type="email"
+            className="text-input"
+            placeholder="your@email.com"
+            value={senderEmail}
+            onChange={(e) => setSenderEmail(e.target.value)}
+          />
         </div>
 
+        {/* Recipient email — only if other */}
         {recipient === 'other' && (
           <div style={{ marginBottom: '1.5rem' }}>
             <label className="field-label">{t("create.email_label")}</label>
-            <input type="email" className="text-input" placeholder="their@email.com" />
+            <input
+              type="email"
+              className="text-input"
+              placeholder="their@email.com"
+              value={recipientEmail}
+              onChange={(e) => setRecipientEmail(e.target.value)}
+            />
           </div>
         )}
 
@@ -159,18 +216,33 @@ export default function CreatePage() {
         <div className="date-grid" style={{ marginBottom: '3rem' }}>
           <div>
             <label className="field-label">{t("create.date_label")}</label>
-            <input type="date" className="text-input" />
+            <input
+              type="date"
+              className="text-input"
+              value={openDate}
+              onChange={(e) => setOpenDate(e.target.value)}
+            />
           </div>
           <div>
             <label className="field-label">{t("create.time_label")}</label>
-            <input type="time" className="text-input" />
+            <input
+              type="time"
+              className="text-input"
+              value={openTime}
+              onChange={(e) => setOpenTime(e.target.value)}
+            />
           </div>
         </div>
 
         {/* CTA */}
         <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '2rem' }}>
-          <button className="seal-btn">
-            {t("create.pay")} →
+          <button
+            className="seal-btn"
+            onClick={handleSubmit}
+            disabled={loading}
+            style={{ opacity: loading ? 0.6 : 1 }}
+          >
+            {loading ? 'Sealing...' : `${t("create.pay")} →`}
           </button>
           <p style={{ textAlign: 'center', fontSize: '0.9rem', color: 'rgba(255,255,255,0.25)', lineHeight: 1.6, marginTop: '1rem' }}>
             {t("create.pay_desc")}
