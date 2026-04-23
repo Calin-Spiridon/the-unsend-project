@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "create": "Envoyer un message",
+    "track": "Suivre votre capsule",
+    "about": "À propos",
+    "faq": "FAQ"
+  },
+  "home": {
+    "hero_title": "Certains mots méritent d'attendre.",
+    "hero_subtitle": "Écrivez quelque chose de vrai. Scellez-le. Il arrive exactement au bon moment.",
+    "cta": "Écrire votre message",
+    "how_title": "Comment ça marche",
+    "step1_title": "Écrivez",
+    "step1_desc": "Dites ce que vous ressentez vraiment. À vous-même ou à quelqu'un que vous aimez.",
+    "step2_title": "Scellez",
+    "step2_desc": "Choisissez quand il s'ouvre. Un mois, un an, un moment qui compte.",
+    "step3_title": "Attendez",
+    "step3_desc": "Nous le gardons en sécurité. Il arrive exactement quand vous l'avez choisi."
+  },
+  "moods": {
+    "love": "Amour",
+    "hope": "Espoir",
+    "regret": "Regret",
+    "promise": "Promesse",
+    "for_kids": "Pour mon enfant",
+    "forgive": "Pardon",
+    "remember_me": "Souviens-toi de moi",
+    "gratitude": "Gratitude",
+    "courage": "Courage",
+    "goodbye": "Au revoir",
+    "proud": "Fierté"
+  },
+  "create": {
+    "title": "Écrivez votre message",
+    "mood_label": "Qu'est-ce que cela représente?",
+    "message_label": "Votre message",
+    "message_placeholder": "Écrivez ce que vous voulez vraiment dire...",
+    "recipient_label": "Pour qui est-ce?",
+    "recipient_self": "Pour moi",
+    "recipient_other": "Pour quelqu'un d'autre",
+    "email_label": "Leur adresse email",
+    "your_email_label": "Votre adresse email",
+    "date_label": "Quand doit-il s'ouvrir?",
+    "time_label": "À quelle heure?",
+    "delivery_label": "Comment souhaitez-vous le livrer?",
+    "delivery_email": "Envoyer par email automatiquement",
+    "delivery_link": "J'enverrai le lien moi-même",
+    "title_label": "Donnez-lui un titre (optionnel)",
+    "title_placeholder": "Pour quand vous aurez besoin de force...",
+    "next": "Continuer",
+    "pay": "Sceller pour 1€",
+    "pay_desc": "Votre message sera chiffré et conservé en sécurité jusqu'au moment choisi."
+  },
+  "sealed": {
+    "title": "Votre message est scellé.",
+    "subtitle": "Il sera là le",
+    "copy_link": "Copier le lien",
+    "link_copied": "Copié!",
+    "send_now": "Envoyez maintenant ou plus tard — il vous appartient.",
+    "share_title": "Partager votre capsule",
+    "certificate": "Votre certificat de capsule",
+    "what_next": "Nous l'enverrons par email à la date choisie. Ou copiez le lien et envoyez-le vous-même."
+  },
+  "open": {
+    "loading": "Ouverture de votre message...",
+    "from": "Un message de",
+    "written_on": "Écrit le",
+    "opens_on": "S'ouvre le",
+    "reply": "Envoyer une réponse au passé",
+    "create_own": "Créer la vôtre",
+    "save": "Sauvegarder ce moment",
+    "countdown_title": "Ce message n'est pas encore prêt.",
+    "countdown_subtitle": "Il a été scellé avec soin. Il s'ouvre dans"
+  },
+  "track": {
+    "title": "Retrouvez votre capsule",
+    "subtitle": "Entrez votre code unique pour vérifier le statut de votre message.",
+    "code_label": "Votre code de capsule",
+    "code_placeholder": "ex. UNSEND-A3K9P",
+    "search": "Trouver la capsule",
+    "status_sealed": "Scellée — en attente de son moment",
+    "status_opened": "Ouverte",
+    "status_pending": "En cours de livraison"
+  },
+  "footer": {
+    "tagline": "Certains mots méritent d'attendre.",
+    "privacy": "Confidentialité",
+    "faq": "FAQ",
+    "about": "À propos"
+  }
+}

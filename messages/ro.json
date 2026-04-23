@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "create": "Trimite un mesaj",
+    "track": "Urmărește capsula",
+    "about": "Despre noi",
+    "faq": "Întrebări frecvente"
+  },
+  "home": {
+    "hero_title": "Unele cuvinte merită să aștepte.",
+    "hero_subtitle": "Scrie ceva adevărat. Sigilează-l. Ajunge exact când trebuie.",
+    "cta": "Scrie mesajul tău",
+    "how_title": "Cum funcționează",
+    "step1_title": "Scrie",
+    "step1_desc": "Spune ce simți cu adevărat. Ție sau cuiva drag.",
+    "step2_title": "Sigilează",
+    "step2_desc": "Alege când se deschide. O lună, un an, un moment care contează.",
+    "step3_title": "Așteaptă",
+    "step3_desc": "Îl păstrăm în siguranță. Ajunge exact când ai ales."
+  },
+  "moods": {
+    "love": "Iubire",
+    "hope": "Speranță",
+    "regret": "Regret",
+    "promise": "Promisiune",
+    "for_kids": "Pentru copilul meu",
+    "forgive": "Iertare",
+    "remember_me": "Amintește-ți de mine",
+    "gratitude": "Recunoștință",
+    "courage": "Curaj",
+    "goodbye": "La revedere",
+    "proud": "Mândrie"
+  },
+  "create": {
+    "title": "Scrie mesajul tău",
+    "mood_label": "Cum se simte asta?",
+    "message_label": "Mesajul tău",
+    "message_placeholder": "Scrie ce vrei cu adevărat să spui...",
+    "recipient_label": "Pentru cine este?",
+    "recipient_self": "Pentru mine",
+    "recipient_other": "Pentru altcineva",
+    "email_label": "Adresa lor de email",
+    "your_email_label": "Adresa ta de email",
+    "date_label": "Când să se deschidă?",
+    "time_label": "La ce oră?",
+    "delivery_label": "Cum vrei să îl livrezi?",
+    "delivery_email": "Trimite automat prin email",
+    "delivery_link": "Eu trimit link-ul",
+    "title_label": "Dă-i un titlu (opțional)",
+    "title_placeholder": "Pentru când o să ai nevoie de putere...",
+    "next": "Continuă",
+    "pay": "Sigilează-l cu 1€",
+    "pay_desc": "Mesajul tău va fi criptat și păstrat în siguranță până în momentul ales."
+  },
+  "sealed": {
+    "title": "Mesajul tău este sigilat.",
+    "subtitle": "Va fi acolo pe",
+    "copy_link": "Copiază link-ul",
+    "link_copied": "Copiat!",
+    "send_now": "Trimite acum sau mai târziu — e al tău.",
+    "share_title": "Distribuie capsula",
+    "certificate": "Certificatul capsulei tale",
+    "what_next": "Îl trimitem prin email la data aleasă. Sau copiază link-ul și trimite-l tu oricând."
+  },
+  "open": {
+    "loading": "Se deschide mesajul tău...",
+    "from": "Un mesaj de la",
+    "written_on": "Scris pe",
+    "opens_on": "Se deschide pe",
+    "reply": "Trimite un răspuns în trecut",
+    "create_own": "Creează-ți propria capsulă",
+    "save": "Salvează acest moment",
+    "countdown_title": "Acest mesaj nu e încă gata.",
+    "countdown_subtitle": "A fost sigilat cu grijă. Se deschide în"
+  },
+  "track": {
+    "title": "Găsește capsula ta",
+    "subtitle": "Introdu codul unic pentru a verifica statusul mesajului.",
+    "code_label": "Codul capsulei tale",
+    "code_placeholder": "ex. UNSEND-A3K9P",
+    "search": "Găsește capsula",
+    "status_sealed": "Sigilată — așteaptă momentul",
+    "status_opened": "Deschisă",
+    "status_pending": "În livrare"
+  },
+  "footer": {
+    "tagline": "Unele cuvinte merită să aștepte.",
+    "privacy": "Confidențialitate",
+    "faq": "Întrebări frecvente",
+    "about": "Despre noi"
+  }
+}

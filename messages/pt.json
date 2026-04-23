@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "create": "Enviar uma mensagem",
+    "track": "Rastrear sua cápsula",
+    "about": "Sobre nós",
+    "faq": "Perguntas frequentes"
+  },
+  "home": {
+    "hero_title": "Algumas palavras merecem esperar.",
+    "hero_subtitle": "Escreva algo real. Sele-o. Chega exatamente quando deve.",
+    "cta": "Escreva sua mensagem",
+    "how_title": "Como funciona",
+    "step1_title": "Escreva",
+    "step1_desc": "Diga o que realmente sente. Para você mesmo ou para alguém que ama.",
+    "step2_title": "Sele",
+    "step2_desc": "Escolha quando abre. Um mês, um ano, um momento que importa.",
+    "step3_title": "Espere",
+    "step3_desc": "Guardamos com segurança. Chega exatamente quando você escolheu."
+  },
+  "moods": {
+    "love": "Amor",
+    "hope": "Esperança",
+    "regret": "Arrependimento",
+    "promise": "Promessa",
+    "for_kids": "Para meu filho",
+    "forgive": "Perdão",
+    "remember_me": "Lembra-te de mim",
+    "gratitude": "Gratidão",
+    "courage": "Coragem",
+    "goodbye": "Adeus",
+    "proud": "Orgulho"
+  },
+  "create": {
+    "title": "Escreva sua mensagem",
+    "mood_label": "Como isso se sente?",
+    "message_label": "Sua mensagem",
+    "message_placeholder": "Escreva o que realmente quer dizer...",
+    "recipient_label": "Para quem é?",
+    "recipient_self": "Para mim",
+    "recipient_other": "Para outra pessoa",
+    "email_label": "O endereço de email deles",
+    "your_email_label": "Seu endereço de email",
+    "date_label": "Quando deve abrir?",
+    "time_label": "A que horas?",
+    "delivery_label": "Como quer entregar?",
+    "delivery_email": "Enviar por email automaticamente",
+    "delivery_link": "Eu enviarei o link",
+    "title_label": "Dê um título (opcional)",
+    "title_placeholder": "Para quando precisar de força...",
+    "next": "Continuar",
+    "pay": "Selar por 1€",
+    "pay_desc": "Sua mensagem será criptografada e mantida segura até o momento escolhido."
+  },
+  "sealed": {
+    "title": "Sua mensagem está selada.",
+    "subtitle": "Estará esperando em",
+    "copy_link": "Copiar link",
+    "link_copied": "Copiado!",
+    "send_now": "Envie agora ou depois — é seu.",
+    "share_title": "Compartilhe sua cápsula",
+    "certificate": "Seu certificado de cápsula",
+    "what_next": "Enviaremos por email na data escolhida. Ou copie o link e envie você mesmo."
+  },
+  "open": {
+    "loading": "Abrindo sua mensagem...",
+    "from": "Uma mensagem de",
+    "written_on": "Escrito em",
+    "opens_on": "Abre em",
+    "reply": "Enviar uma resposta ao passado",
+    "create_own": "Crie a sua",
+    "save": "Salvar este momento",
+    "countdown_title": "Esta mensagem ainda não está pronta.",
+    "countdown_subtitle": "Foi selada com cuidado. Abre em"
+  },
+  "track": {
+    "title": "Encontre sua cápsula",
+    "subtitle": "Digite seu código único para verificar o status da sua mensagem.",
+    "code_label": "Seu código de cápsula",
+    "code_placeholder": "ex. UNSEND-A3K9P",
+    "search": "Encontrar cápsula",
+    "status_sealed": "Selada — esperando seu momento",
+    "status_opened": "Aberta",
+    "status_pending": "Em entrega"
+  },
+  "footer": {
+    "tagline": "Algumas palavras merecem esperar.",
+    "privacy": "Privacidade",
+    "faq": "Perguntas frequentes",
+    "about": "Sobre nós"
+  }
+}

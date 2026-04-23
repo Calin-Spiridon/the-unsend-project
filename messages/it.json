@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "create": "Invia un messaggio",
+    "track": "Traccia la tua capsula",
+    "about": "Chi siamo",
+    "faq": "Domande frequenti"
+  },
+  "home": {
+    "hero_title": "Alcune parole meritano di aspettare.",
+    "hero_subtitle": "Scrivi qualcosa di vero. Sigillalo. Arriva esattamente quando deve.",
+    "cta": "Scrivi il tuo messaggio",
+    "how_title": "Come funziona",
+    "step1_title": "Scrivi",
+    "step1_desc": "Di' quello che senti davvero. A te stesso o a qualcuno che ami.",
+    "step2_title": "Sigilla",
+    "step2_desc": "Scegli quando si apre. Un mese, un anno, un momento che conta.",
+    "step3_title": "Aspetta",
+    "step3_desc": "Lo teniamo al sicuro. Arriva esattamente quando hai scelto."
+  },
+  "moods": {
+    "love": "Amore",
+    "hope": "Speranza",
+    "regret": "Rimpianto",
+    "promise": "Promessa",
+    "for_kids": "Per il mio bambino",
+    "forgive": "Perdono",
+    "remember_me": "Ricordami",
+    "gratitude": "Gratitudine",
+    "courage": "Coraggio",
+    "goodbye": "Addio",
+    "proud": "Orgoglio"
+  },
+  "create": {
+    "title": "Scrivi il tuo messaggio",
+    "mood_label": "Come ti senti?",
+    "message_label": "Il tuo messaggio",
+    "message_placeholder": "Scrivi quello che vuoi davvero dire...",
+    "recipient_label": "Per chi è?",
+    "recipient_self": "Per me",
+    "recipient_other": "Per qualcun altro",
+    "email_label": "Il loro indirizzo email",
+    "your_email_label": "Il tuo indirizzo email",
+    "date_label": "Quando deve aprirsi?",
+    "time_label": "A che ora?",
+    "delivery_label": "Come vuoi consegnarlo?",
+    "delivery_email": "Invia automaticamente via email",
+    "delivery_link": "Invierò il link io stesso",
+    "title_label": "Dagli un titolo (opzionale)",
+    "title_placeholder": "Per quando avrai bisogno di forza...",
+    "next": "Continua",
+    "pay": "Sigillalo per 1€",
+    "pay_desc": "Il tuo messaggio sarà crittografato e conservato al sicuro fino al momento scelto."
+  },
+  "sealed": {
+    "title": "Il tuo messaggio è sigillato.",
+    "subtitle": "Sarà lì il",
+    "copy_link": "Copia link",
+    "link_copied": "Copiato!",
+    "send_now": "Invia ora o dopo — è tuo.",
+    "share_title": "Condividi la tua capsula",
+    "certificate": "Il tuo certificato capsula",
+    "what_next": "Lo invieremo via email alla data scelta. Oppure copia il link e invialo tu stesso."
+  },
+  "open": {
+    "loading": "Apertura del tuo messaggio...",
+    "from": "Un messaggio da",
+    "written_on": "Scritto il",
+    "opens_on": "Si apre il",
+    "reply": "Invia una risposta al passato",
+    "create_own": "Crea la tua",
+    "save": "Salva questo momento",
+    "countdown_title": "Questo messaggio non è ancora pronto.",
+    "countdown_subtitle": "È stato sigillato con cura. Si apre tra"
+  },
+  "track": {
+    "title": "Trova la tua capsula",
+    "subtitle": "Inserisci il tuo codice unico per verificare lo stato del tuo messaggio.",
+    "code_label": "Il tuo codice capsula",
+    "code_placeholder": "es. UNSEND-A3K9P",
+    "search": "Trova capsula",
+    "status_sealed": "Sigillata — in attesa del suo momento",
+    "status_opened": "Aperta",
+    "status_pending": "In consegna"
+  },
+  "footer": {
+    "tagline": "Alcune parole meritano di aspettare.",
+    "privacy": "Privacy",
+    "faq": "Domande frequenti",
+    "about": "Chi siamo"
+  }
+}

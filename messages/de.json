@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "create": "Nachricht senden",
+    "track": "Kapsel verfolgen",
+    "about": "Über uns",
+    "faq": "Häufige Fragen"
+  },
+  "home": {
+    "hero_title": "Manche Worte verdienen es zu warten.",
+    "hero_subtitle": "Schreib etwas Echtes. Versiegle es. Es kommt genau dann an, wenn es soll.",
+    "cta": "Schreib deine Nachricht",
+    "how_title": "Wie es funktioniert",
+    "step1_title": "Schreiben",
+    "step1_desc": "Sag, was du wirklich fühlst. An dich selbst oder jemanden, den du liebst.",
+    "step2_title": "Versiegeln",
+    "step2_desc": "Wähle, wann es geöffnet wird. Ein Monat, ein Jahr, ein Moment der zählt.",
+    "step3_title": "Warten",
+    "step3_desc": "Wir bewahren es sicher. Es kommt genau dann an, wenn du es gewählt hast."
+  },
+  "moods": {
+    "love": "Liebe",
+    "hope": "Hoffnung",
+    "regret": "Bedauern",
+    "promise": "Versprechen",
+    "for_kids": "Für mein Kind",
+    "forgive": "Vergebung",
+    "remember_me": "Erinner dich an mich",
+    "gratitude": "Dankbarkeit",
+    "courage": "Mut",
+    "goodbye": "Auf Wiedersehen",
+    "proud": "Stolz"
+  },
+  "create": {
+    "title": "Schreib deine Nachricht",
+    "mood_label": "Wie fühlt sich das an?",
+    "message_label": "Deine Nachricht",
+    "message_placeholder": "Schreib, was du wirklich sagen möchtest...",
+    "recipient_label": "Für wen ist das?",
+    "recipient_self": "Für mich",
+    "recipient_other": "Für jemand anderen",
+    "email_label": "Ihre E-Mail-Adresse",
+    "your_email_label": "Deine E-Mail-Adresse",
+    "date_label": "Wann soll es geöffnet werden?",
+    "time_label": "Um wie viel Uhr?",
+    "delivery_label": "Wie möchtest du es zustellen?",
+    "delivery_email": "Automatisch per E-Mail senden",
+    "delivery_link": "Ich sende den Link selbst",
+    "title_label": "Gib ihm einen Titel (optional)",
+    "title_placeholder": "Für wenn du Stärke brauchst...",
+    "next": "Weiter",
+    "pay": "Für 1€ versiegeln",
+    "pay_desc": "Deine Nachricht wird verschlüsselt und sicher aufbewahrt bis zum gewählten Moment."
+  },
+  "sealed": {
+    "title": "Deine Nachricht ist versiegelt.",
+    "subtitle": "Sie wartet am",
+    "copy_link": "Link kopieren",
+    "link_copied": "Kopiert!",
+    "send_now": "Sende jetzt oder später — sie gehört dir.",
+    "share_title": "Deine Kapsel teilen",
+    "certificate": "Dein Kapsel-Zertifikat",
+    "what_next": "Wir senden es per E-Mail am gewählten Datum. Oder kopiere den Link und sende ihn selbst."
+  },
+  "open": {
+    "loading": "Deine Nachricht wird geöffnet...",
+    "from": "Eine Nachricht von",
+    "written_on": "Geschrieben am",
+    "opens_on": "Öffnet sich am",
+    "reply": "Eine Antwort in die Vergangenheit senden",
+    "create_own": "Eigene erstellen",
+    "save": "Diesen Moment speichern",
+    "countdown_title": "Diese Nachricht ist noch nicht bereit.",
+    "countdown_subtitle": "Sie wurde sorgfältig versiegelt. Sie öffnet sich in"
+  },
+  "track": {
+    "title": "Finde deine Kapsel",
+    "subtitle": "Gib deinen einzigartigen Code ein, um den Status deiner Nachricht zu prüfen.",
+    "code_label": "Dein Kapsel-Code",
+    "code_placeholder": "z.B. UNSEND-A3K9P",
+    "search": "Kapsel finden",
+    "status_sealed": "Versiegelt — wartet auf seinen Moment",
+    "status_opened": "Geöffnet",
+    "status_pending": "Wird zugestellt"
+  },
+  "footer": {
+    "tagline": "Manche Worte verdienen es zu warten.",
+    "privacy": "Datenschutz",
+    "faq": "Häufige Fragen",
+    "about": "Über uns"
+  }
+}

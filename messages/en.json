@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "create": "Send a message",
+    "track": "Track your capsule",
+    "about": "About",
+    "faq": "FAQ"
+  },
+  "home": {
+    "hero_title": "Some words deserve to wait.",
+    "hero_subtitle": "Write something real. Seal it. It arrives exactly when it should.",
+    "cta": "Write your message",
+    "how_title": "How it works",
+    "step1_title": "Write",
+    "step1_desc": "Say what you really mean. To yourself or someone you love.",
+    "step2_title": "Seal",
+    "step2_desc": "Choose when it opens. A month, a year, a moment that matters.",
+    "step3_title": "Wait",
+    "step3_desc": "We keep it safe. It arrives exactly when you chose."
+  },
+  "moods": {
+    "love": "Love",
+    "hope": "Hope",
+    "regret": "Regret",
+    "promise": "Promise",
+    "for_kids": "For my child",
+    "forgive": "Forgiveness",
+    "remember_me": "Remember me",
+    "gratitude": "Gratitude",
+    "courage": "Courage",
+    "goodbye": "Goodbye",
+    "proud": "Proud"
+  },
+  "create": {
+    "title": "Write your message",
+    "mood_label": "What does this feel like?",
+    "message_label": "Your message",
+    "message_placeholder": "Write what you really want to say...",
+    "recipient_label": "Who is this for?",
+    "recipient_self": "For me",
+    "recipient_other": "For someone else",
+    "email_label": "Their email address",
+    "your_email_label": "Your email address",
+    "date_label": "When should it open?",
+    "time_label": "At what time?",
+    "delivery_label": "How would you like to deliver it?",
+    "delivery_email": "Send by email automatically",
+    "delivery_link": "I'll send the link myself",
+    "title_label": "Give it a title (optional)",
+    "title_placeholder": "For when you need strength...",
+    "next": "Continue",
+    "pay": "Seal it for €1",
+    "pay_desc": "Your message will be encrypted and kept safe until the moment you chose."
+  },
+  "sealed": {
+    "title": "Your message is sealed.",
+    "subtitle": "It will be waiting on",
+    "copy_link": "Copy link",
+    "link_copied": "Copied!",
+    "send_now": "Send now or later — it's yours.",
+    "share_title": "Share your capsule",
+    "certificate": "Your capsule certificate",
+    "what_next": "We'll send it by email on the chosen date. Or copy the link and send it yourself anytime."
+  },
+  "open": {
+    "loading": "Opening your message...",
+    "from": "A message from",
+    "written_on": "Written on",
+    "opens_on": "This opens on",
+    "reply": "Send a reply to the past",
+    "create_own": "Create your own",
+    "save": "Save this moment",
+    "countdown_title": "This message isn't ready yet.",
+    "countdown_subtitle": "It was sealed with care. It opens in"
+  },
+  "track": {
+    "title": "Find your capsule",
+    "subtitle": "Enter your unique code to check the status of your message.",
+    "code_label": "Your capsule code",
+    "code_placeholder": "e.g. UNSEND-A3K9P",
+    "search": "Find capsule",
+    "status_sealed": "Sealed — waiting for its moment",
+    "status_opened": "Opened",
+    "status_pending": "Being delivered"
+  },
+  "footer": {
+    "tagline": "Some words deserve to wait.",
+    "privacy": "Privacy",
+    "faq": "FAQ",
+    "about": "About"
+  }
+}
