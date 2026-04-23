@@ -21,7 +21,7 @@ export default function AboutPage() {
         </h1>
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-          <p style={{ fontSize: '1.1rem', color: 'rgba(255,255,255,0.5)', lineHeight: 1.9, fontFamily: "'Cormorant Garamond', serif", fontStyle: 'italic', fontSize: '1.3rem', borderLeft: '2px solid rgba(201,149,108,0.3)', paddingLeft: '1.5rem' }}>
+          <p style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: 'italic', fontSize: '1.3rem', color: 'rgba(255,255,255,0.5)', lineHeight: 1.9, borderLeft: '2px solid rgba(201,149,108,0.3)', paddingLeft: '1.5rem' }}>
             "There are things we want to say but not yet. Promises we want to make but not out loud. Feelings we want to share but only when the moment is right."
           </p>
 
