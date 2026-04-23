@@ -3,9 +3,7 @@ import Stripe from 'stripe';
 import { supabaseAdmin } from '@/lib/supabase';
 import { CreateCapsuleInput } from '@/lib/types';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
-  apiVersion: '2026-03-25.dahlia',
-});
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
 export async function POST(req: NextRequest) {
   try {
@@ -39,6 +37,7 @@ export async function POST(req: NextRequest) {
         sender_email,
         open_date,
         delivery_method: delivery_method || 'email',
+        locale: locale || 'en',
         is_paid: false,
         status: 'sealed',
       })
