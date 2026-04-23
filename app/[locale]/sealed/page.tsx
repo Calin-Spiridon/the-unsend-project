@@ -2,6 +2,7 @@ import { supabaseAdmin } from '@/lib/supabase';
 import Link from 'next/link';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { CopyLinkButton } from '@/components/ui/CopyLinkButton';
+import { LanguageSwitcher } from '@/components/ui/LanguageSwitcher';
 
 export default async function SealedPage({
   searchParams,
@@ -54,11 +55,12 @@ export default async function SealedPage({
         .seal-card { animation: sealIn 1.2s ease forwards; }
       `}</style>
 
-      <nav style={{ display: 'flex', alignItems: 'center', padding: '1.8rem 2.5rem', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
-        <Link href={`/${locale}`} style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>
-          The Unsend Project
-        </Link>
-      </nav>
+      <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1.8rem 2.5rem', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+  <Link href={`/${locale}`} style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>
+    The Unsend Project
+  </Link>
+  <LanguageSwitcher currentLocale={locale} />
+</nav>
 
       <div style={{ maxWidth: '600px', margin: '0 auto', padding: '4rem 2rem', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
 

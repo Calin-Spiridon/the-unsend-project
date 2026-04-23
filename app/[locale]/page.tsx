@@ -1,5 +1,6 @@
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
+import { LanguageSwitcher } from '@/components/ui/LanguageSwitcher';
 
 const MOODS = [
   { key: 'love', icon: '♡', color: '#C9956C' },
@@ -45,15 +46,18 @@ export default function HomePage() {
 
       {/* Nav */}
       <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1.8rem 2.5rem', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
-        <span style={{ fontSize: '12px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)' }}>
-          The Unsend Project
-        </span>
-        <div className="nav-links" style={{ display: 'flex', gap: '2.5rem' }}>
-          <Link href={`/${locale}/create`}>{t("nav.create")}</Link>
-          <Link href={`/${locale}/track`}>{t("nav.track")}</Link>
-          <Link href={`/${locale}/about`}>{t("nav.about")}</Link>
-        </div>
-      </nav>
+  <span style={{ fontSize: '12px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)' }}>
+    The Unsend Project
+  </span>
+  <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
+    <div className="nav-links" style={{ display: 'flex', gap: '2.5rem' }}>
+      <Link href={`/${locale}/create`}>{t("nav.create")}</Link>
+      <Link href={`/${locale}/track`}>{t("nav.track")}</Link>
+      <Link href={`/${locale}/about`}>{t("nav.about")}</Link>
+    </div>
+    <LanguageSwitcher currentLocale={locale} />
+  </div>
+</nav>
 
       {/* Hero */}
       <section style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '92vh', textAlign: 'center', padding: '4rem 2rem', position: 'relative' }}>

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
+import { LanguageSwitcher } from '@/components/ui/LanguageSwitcher';
 
 const MOODS = [
   { key: 'love', icon: '♡', color: '#C9956C' },
@@ -89,11 +90,12 @@ export default function CreatePage() {
         .char-counter { font-size: 11px; letter-spacing: 0.1em; transition: color 0.3s; }
       `}</style>
 
-      <nav style={{ display: 'flex', alignItems: 'center', padding: '1.8rem 2.5rem', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
-        <Link href={`/${locale}`} style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>
-          ← The Unsend Project
-        </Link>
-      </nav>
+      <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1.8rem 2.5rem', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+  <Link href={`/${locale}`} style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>
+    ← The Unsend Project
+  </Link>
+  <LanguageSwitcher currentLocale={locale} />
+</nav>
 
       <div className="create-container">
 

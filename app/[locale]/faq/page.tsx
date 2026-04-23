@@ -1,5 +1,6 @@
 import { useLocale } from "next-intl";
 import Link from "next/link";
+import { LanguageSwitcher } from '@/components/ui/LanguageSwitcher';
 
 const FAQS = [
   {
@@ -57,11 +58,12 @@ export default function FAQPage() {
 
   return (
     <main style={{ minHeight: '100vh', background: '#080808', color: '#fff' }}>
-      <nav style={{ display: 'flex', alignItems: 'center', padding: '1.8rem 2.5rem', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
-        <Link href={`/${locale}`} style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>
-          ← The Unsend Project
-        </Link>
-      </nav>
+    <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1.8rem 2.5rem', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+  <Link href={`/${locale}`} style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>
+    ← The Unsend Project
+  </Link>
+  <LanguageSwitcher currentLocale={locale} />
+</nav>
 
       <div style={{ maxWidth: '720px', margin: '0 auto', padding: '5rem 2rem 8rem' }}>
         <p style={{ fontSize: '11px', letterSpacing: '0.4em', textTransform: 'uppercase', color: 'rgba(201,149,108,0.8)', marginBottom: '0.75rem' }}>support</p>
