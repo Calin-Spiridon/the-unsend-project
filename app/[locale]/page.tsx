@@ -45,15 +45,15 @@ export default function HomePage() {
       `}</style>
 
       {/* Nav */}
-      <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1.8rem 2.5rem', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
-  <span style={{ fontSize: '12px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)' }}>
+    <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1.2rem 1.5rem', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+  <span style={{ fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)', whiteSpace: 'nowrap' }}>
     The Unsend Project
   </span>
-  <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
-    <div className="nav-links" style={{ display: 'flex', gap: '2.5rem' }}>
-      <Link href={`/${locale}/create`}>{t("nav.create")}</Link>
-      <Link href={`/${locale}/track`}>{t("nav.track")}</Link>
-      <Link href={`/${locale}/about`}>{t("nav.about")}</Link>
+  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+    <div style={{ display: 'flex', gap: '1.2rem' }} className="nav-links">
+      <Link href={`/${locale}/create`} style={{ fontSize: '10px', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', whiteSpace: 'nowrap' }}>{t("nav.create")}</Link>
+      <Link href={`/${locale}/track`} style={{ fontSize: '10px', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', whiteSpace: 'nowrap' }}>{t("nav.track")}</Link>
+      <Link href={`/${locale}/about`} style={{ fontSize: '10px', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', whiteSpace: 'nowrap' }}>{t("nav.about")}</Link>
     </div>
     <LanguageSwitcher currentLocale={locale} />
   </div>
