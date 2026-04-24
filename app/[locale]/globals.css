@@ -78,3 +78,17 @@ input:focus, textarea:focus {
 input::placeholder, textarea::placeholder {
   color: rgba(255,255,255,0.2);
 }
+
+.page-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.8rem 2.5rem;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+@media (max-width: 640px) {
+  .page-nav {
+    padding: 1.2rem 1.25rem;
+  }
+}

@@ -90,7 +90,7 @@ export default function CreatePage() {
         .char-counter { font-size: 11px; letter-spacing: 0.1em; transition: color 0.3s; }
       `}</style>
 
-      <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1.8rem 2.5rem', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+      <nav className="page-nav">
   <Link href={`/${locale}`} style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>
     ← The Unsend Project
   </Link>

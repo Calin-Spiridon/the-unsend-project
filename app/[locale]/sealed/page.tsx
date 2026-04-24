@@ -55,7 +55,7 @@ export default async function SealedPage({
         .seal-card { animation: sealIn 1.2s ease forwards; }
       `}</style>
 
-      <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1.8rem 2.5rem', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+      <nav className="page-nav">
   <Link href={`/${locale}`} style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>
     The Unsend Project
   </Link>

@@ -37,10 +37,17 @@ export default function HomePage() {
         .quote-text { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: clamp(2rem, 4vw, 3.8rem); color: rgba(255,255,255,0.2); line-height: 1.4; }
         .cta-btn { display: inline-flex; align-items: center; gap: 12px; background: #C9956C; color: #080808; padding: 18px 48px; border-radius: 4px; font-size: 12px; letter-spacing: 0.25em; text-transform: uppercase; text-decoration: none; font-weight: 500; }
         .cta-sub { font-size: 11px; color: rgba(255,255,255,0.25); letter-spacing: 0.15em; margin-top: 1rem; }
+        .how-section { padding: 6rem 2.5rem; max-width: 1100px; margin: 0 auto; }
+        .moods-section { padding: 5rem 2.5rem; border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); }
+        .quote-section { padding: 8rem 2.5rem; text-align: center; }
         @media (max-width: 768px) {
           .steps-grid { grid-template-columns: 1fr; gap: 1rem; }
           .step-card { padding: 2rem 1.5rem; }
           .nav-links { display: none; }
+          .how-section { padding: 3rem 1.5rem; }
+          .moods-section { padding: 3rem 1.5rem; }
+          .quote-section { padding: 4rem 1.5rem; }
+          .cta-btn { padding: 16px 2rem; width: 100%; justify-content: center; box-sizing: border-box; }
         }
       `}</style>
 
@@ -92,7 +99,7 @@ export default function HomePage() {
       </section>
 
       {/* How it works */}
-      <section style={{ padding: '6rem 2.5rem', maxWidth: '1100px', margin: '0 auto' }}>
+      <section className="how-section">
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
           <p style={{ fontSize: '11px', letterSpacing: '0.5em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '1rem' }}>
             {t("home.how_title")}
@@ -115,7 +122,7 @@ export default function HomePage() {
       </section>
 
       {/* Moods */}
-      <section style={{ padding: '5rem 2.5rem', borderTop: '1px solid rgba(255,255,255,0.06)', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+      <section className="moods-section">
         <p style={{ textAlign: 'center', fontSize: '11px', letterSpacing: '0.5em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: '3rem' }}>
           every feeling has a capsule
         </p>
@@ -130,7 +137,7 @@ export default function HomePage() {
       </section>
 
       {/* Quote */}
-      <section style={{ padding: '8rem 2.5rem', textAlign: 'center' }}>
+      <section className="quote-section">
         <p className="quote-text" style={{ maxWidth: '800px', margin: '0 auto' }}>
           "Write it now.<br />
           <span style={{ color: 'rgba(201,149,108,0.6)' }}>Let it arrive when it matters.</span>"

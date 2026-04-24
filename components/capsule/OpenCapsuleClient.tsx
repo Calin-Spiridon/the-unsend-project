@@ -89,6 +89,8 @@ export function OpenCapsuleClient({ capsule, locale, translations }: {
     .fade-up { animation: fadeUp 0.8s ease forwards; }
     .fade-up-2 { animation: fadeUp 0.8s ease 0.2s forwards; opacity: 0; }
     .fade-up-3 { animation: fadeUp 0.8s ease 0.4s forwards; opacity: 0; }
+    .msg-card { padding: 3rem 2.5rem; }
+    @media (max-width: 640px) { .msg-card { padding: 1.5rem 1.25rem; } }
   `;
 
   return (
@@ -138,11 +140,10 @@ export function OpenCapsuleClient({ capsule, locale, translations }: {
             </p>
           </div>
 
-          <div className="message-reveal" style={{
+          <div className="message-reveal msg-card" style={{
             background: 'rgba(255,255,255,0.02)',
             border: `1px solid ${moodColor}20`,
             borderRadius: '16px',
-            padding: '3rem 2.5rem',
             marginBottom: '3rem',
             position: 'relative',
           }}>
