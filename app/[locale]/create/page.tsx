@@ -73,7 +73,7 @@ export default function CreatePage() {
   return (
     <main style={{ minHeight: '100vh', background: '#080808', color: '#fff' }}>
       <style>{`
-        .create-container { max-width: 680px; margin: 0 auto; padding: 3rem 2rem 5rem; }
+        .create-container { max-width: 680px; margin: 0 auto; padding: 3rem 1.5rem 5rem; overflow-x: hidden; }
         .field-label { font-size: 11px; letter-spacing: 0.35em; text-transform: uppercase; color: rgba(255,255,255,0.4); display: block; margin-bottom: 0.875rem; }
         .text-input { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 16px 18px; color: #fff; font-size: 1.05rem; outline: none; font-family: 'Cormorant Garamond', serif; transition: border-color 0.3s; color-scheme: dark; box-sizing: border-box; }
         .text-input:focus { border-color: rgba(201,149,108,0.5); }
@@ -82,9 +82,9 @@ export default function CreatePage() {
         .recipient-btn.active { border-color: #C9956C; color: #C9956C; background: rgba(201,149,108,0.08); }
         .mood-pill { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 100px; padding: 10px 18px; cursor: pointer; transition: all 0.3s; }
         .mood-pill.active { border-color: rgba(201,149,108,0.6); background: rgba(201,149,108,0.08); }
-       .date-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-@media (max-width: 768px) { .date-grid { grid-template-columns: 1fr; gap: 0.75rem; } }
-.date-grid input { width: 100%; max-width: 100%; box-sizing: border-box; }
+        .date-grid { display: grid; grid-template-columns: 1fr; gap: 0.75rem; width: 100%; }
+@media (min-width: 640px) { .date-grid { grid-template-columns: 1fr 1fr; } }
+input[type="date"], input[type="time"] { width: 100%; max-width: 100%; box-sizing: border-box; overflow: hidden; }
         .seal-btn { width: 100%; background: #C9956C; color: #080808; padding: 20px; border-radius: 4px; border: none; cursor: pointer; font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 500; font-family: 'Cormorant Garamond', serif; transition: opacity 0.3s; }
         .seal-btn:hover { opacity: 0.88; }
         .seal-btn:disabled { cursor: not-allowed; }
