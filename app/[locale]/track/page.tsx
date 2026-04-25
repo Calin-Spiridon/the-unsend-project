@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import Link from "next/link";
 import { LanguageSwitcher } from '@/components/ui/LanguageSwitcher';
+import { LocalDate } from '@/components/ui/LocalDate';
 
 export default function TrackPage() {
   const t = useTranslations();
@@ -133,7 +134,7 @@ export default function TrackPage() {
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0.75rem 0', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
                   <span style={{ fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.25)' }}>Opens on</span>
                   <span style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.7)', fontFamily: "'Cormorant Garamond', serif" }}>
-                    {openDate?.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' })}
+                    {openDate && <LocalDate dateString={capsule.open_date} locale={locale} />}
                   </span>
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '0.75rem 0' }}>

@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { CopyLinkButton } from '@/components/ui/CopyLinkButton';
 import { LanguageSwitcher } from '@/components/ui/LanguageSwitcher';
+import { LocalDate } from '@/components/ui/LocalDate';
 
 export default async function SealedPage({
   searchParams,
@@ -35,14 +36,6 @@ export default async function SealedPage({
     );
   }
 
-  const openDate = new Date(capsule.open_date);
-  const formattedDate = openDate.toLocaleDateString(locale, {
-    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
-  });
-  const formattedTime = openDate.toLocaleTimeString(locale, {
-    hour: '2-digit', minute: '2-digit'
-  });
-
   const capsuleLink = `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/open/${token}`;
 
   return (
@@ -55,12 +48,12 @@ export default async function SealedPage({
         .seal-card { animation: sealIn 1.2s ease forwards; }
       `}</style>
 
-      <nav className="page-nav">
-  <Link href={`/${locale}`} style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>
-    The Unsend Project
-  </Link>
-  <LanguageSwitcher currentLocale={locale} />
-</nav>
+      <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1.8rem 2.5rem', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+        <Link href={`/${locale}`} style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>
+          The Unsend Project
+        </Link>
+        <LanguageSwitcher currentLocale={locale} />
+      </nav>
 
       <div style={{ maxWidth: '600px', margin: '0 auto', padding: '4rem 2rem', display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center' }}>
 
@@ -77,18 +70,18 @@ export default async function SealedPage({
             {t("sealed.title")}
           </h1>
 
-          <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.35)', lineHeight: 1.8, marginBottom: '0.5rem' }}>
+          <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.8, marginBottom: '0.5rem' }}>
             {t("sealed.subtitle")}
           </p>
           <p style={{ fontSize: '1.1rem', color: 'rgba(201,149,108,0.8)', fontFamily: "'Cormorant Garamond', serif", fontStyle: 'italic' }}>
-            {formattedDate} at {formattedTime}
+            <LocalDate dateString={capsule.open_date} locale={locale} />
           </p>
         </div>
 
         <div style={{ width: '40px', height: '1px', background: 'rgba(255,255,255,0.1)', marginBottom: '3rem' }} />
 
         <div style={{ width: '100%', marginBottom: '2rem' }}>
-          <p style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.25)', marginBottom: '1rem' }}>
+          <p style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.6)', marginBottom: '1rem' }}>
             {t("sealed.send_now")}
           </p>
           <CopyLinkButton
@@ -99,7 +92,7 @@ export default async function SealedPage({
         </div>
 
         <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '12px', padding: '1.5rem 2rem', width: '100%', marginBottom: '3rem' }}>
-          <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.3)', lineHeight: 1.8 }}>
+          <p style={{ fontSize: '0.9rem', color: 'rgba(255,255,255,0.6)', lineHeight: 1.8 }}>
             {t("sealed.what_next")}
           </p>
         </div>
@@ -111,23 +104,25 @@ export default async function SealedPage({
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', textAlign: 'left' }}>
             {capsule.title && (
               <div>
-                <p style={{ fontSize: '10px', color: 'rgba(255,255,255,0.25)', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '4px' }}>Title</p>
-                <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.7)', fontFamily: "'Cormorant Garamond', serif", fontStyle: 'italic' }}>{capsule.title}</p>
+                <p style={{ fontSize: '10px', color: 'rgba(255,255,255,0.5)', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '4px' }}>Title</p>
+                <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.8)', fontFamily: "'Cormorant Garamond', serif", fontStyle: 'italic' }}>{capsule.title}</p>
               </div>
             )}
             <div>
-              <p style={{ fontSize: '10px', color: 'rgba(255,255,255,0.25)', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '4px' }}>Opens on</p>
-              <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.7)' }}>{formattedDate} at {formattedTime}</p>
+              <p style={{ fontSize: '10px', color: 'rgba(255,255,255,0.5)', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '4px' }}>Opens on</p>
+              <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.8)' }}>
+                <LocalDate dateString={capsule.open_date} locale={locale} />
+              </p>
             </div>
             <div>
-              <p style={{ fontSize: '10px', color: 'rgba(255,255,255,0.25)', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '4px' }}>Capsule code</p>
+              <p style={{ fontSize: '10px', color: 'rgba(255,255,255,0.5)', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '4px' }}>Capsule code</p>
               <p style={{ fontSize: '0.9rem', color: 'rgba(201,149,108,0.7)', fontFamily: 'monospace', letterSpacing: '0.1em' }}>{token}</p>
             </div>
           </div>
         </div>
 
         <div style={{ marginTop: '3rem' }}>
-          <Link href={`/${locale}/create`} style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.25)' }}>
+          <Link href={`/${locale}/create`} style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)' }}>
             {t("open.create_own")} →
           </Link>
         </div>

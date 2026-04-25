@@ -1,4 +1,5 @@
 import { supabaseAdmin } from '@/lib/supabase';
+import { LocalDate } from '@/components/ui/LocalDate';
 import Link from 'next/link';
 import { getLocale, getTranslations } from 'next-intl/server';
 import { OpenCapsuleClient } from '@/components/capsule/OpenCapsuleClient';
@@ -34,7 +35,6 @@ export default async function OpenPage({
   const isReady = now >= openDate;
 
   if (!isReady) {
-    const timeLeft = openDate.getTime() - now.getTime();
     return (
       <main style={{ minHeight: '100vh', background: '#080808', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <CountdownClient
@@ -77,12 +77,6 @@ function CountdownClient({ openDate, title, locale, countdownTitle, countdownSub
   countdownTitle: string;
   countdownSubtitle: string;
 }) {
-  const date = new Date(openDate);
-  const formatted = date.toLocaleDateString(locale, {
-    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
-  });
-  const time = date.toLocaleTimeString(locale, { hour: '2-digit', minute: '2-digit' });
-
   return (
     <div style={{ textAlign: 'center', padding: '2rem', maxWidth: '500px' }}>
       <div style={{ width: '60px', height: '60px', borderRadius: '50%', border: '1px solid rgba(255,255,255,0.1)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 2rem' }}>
@@ -100,7 +94,7 @@ function CountdownClient({ openDate, title, locale, countdownTitle, countdownSub
         {countdownSubtitle}
       </p>
       <p style={{ fontFamily: "'Cormorant Garamond', serif", fontStyle: 'italic', fontSize: '1.3rem', color: 'rgba(201,149,108,0.8)' }}>
-        {formatted} at {time}
+        <LocalDate dateString={openDate} locale={locale} />
       </p>
     </div>
   );
