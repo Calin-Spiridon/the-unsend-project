@@ -3,7 +3,7 @@ import { Resend } from 'resend';
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 const FROM_EMAIL = process.env.RESEND_FROM_EMAIL || 'onboarding@resend.dev';
-const FROM_NAME = 'The Unsend Project';
+const FROM_NAME = 'The Unwrite Project';
 
 export async function sendConfirmationEmail({
   to,
@@ -46,7 +46,7 @@ export async function sendConfirmationEmail({
           <tr>
             <td style="padding:40px 0 20px;text-align:center;border-bottom:1px solid rgba(255,255,255,0.06);">
               <p style="margin:0;font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.3);">
-                The Unsend Project
+                The Unwrite Project
               </p>
             </td>
           </tr>
@@ -181,7 +181,7 @@ export async function sendOpenEmail({
           <tr>
             <td style="padding:40px 0 20px;text-align:center;border-bottom:1px solid rgba(255,255,255,0.06);">
               <p style="margin:0;font-size:11px;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.3);">
-                The Unsend Project
+                The Unwrite Project
               </p>
             </td>
           </tr>

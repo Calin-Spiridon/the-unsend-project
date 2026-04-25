@@ -4,8 +4,8 @@ import { LanguageSwitcher } from '@/components/ui/LanguageSwitcher';
 
 const FAQS = [
   {
-    q: "What is The Unsend Project?",
-    a: "The Unsend Project is a service that lets you write a message today and deliver it to yourself or someone else at a future date and time of your choosing. Think of it as a time capsule for words that matter."
+    q: "What is The Unwrite Project?",
+    a: "The Unwrite Project is a service that lets you write a message today and deliver it to yourself or someone else at a future date and time of your choosing. Think of it as a time capsule for words that matter."
   },
   {
     q: "How much does it cost?",
@@ -17,7 +17,7 @@ const FAQS = [
   },
  {
   q: "What if I lose my capsule code?",
-  a: "Unfortunately, we cannot recover your capsule code automatically. However, if you contact us at hello@theunsendproject.com with the email address you used when creating the capsule, we can verify your identity and help you locate it. Please note that for privacy reasons, we cannot view or share the content of any message."
+  a: "Unfortunately, we cannot recover your capsule code automatically. However, if you contact us at hello@theunwriteproject.com with the email address you used when creating the capsule, we can verify your identity and help you locate it. Please note that for privacy reasons, we cannot view or share the content of any message."
 },
   {
     q: "Is my message private?",
@@ -29,7 +29,7 @@ const FAQS = [
   },
   {
     q: "Can I cancel or edit my capsule after payment?",
-    a: "Due to the nature of the service, capsules cannot be edited after payment. If you need to cancel for an exceptional reason, contact us at hello@theunsendproject.com within 24 hours of purchase."
+    a: "Due to the nature of the service, capsules cannot be edited after payment. If you need to cancel for an exceptional reason, contact us at hello@theunwriteproject.com within 24 hours of purchase."
   },
   {
     q: "What payment methods are accepted?",
@@ -48,7 +48,7 @@ const FAQS = [
     a: "Check the confirmation email we sent after your purchase — it contains both the link and your capsule code. If you can't find it, contact us with the email address you used."
   },
   {
-    q: "Is The Unsend Project available in multiple languages?",
+    q: "Is The Unwrite Project available in multiple languages?",
     a: "Yes. The service is available in English, Romanian, French, Spanish, German, Italian, and Portuguese. The language is detected automatically based on your browser, and you can change it at any time."
   },
 ];
@@ -60,7 +60,7 @@ export default function FAQPage() {
     <main style={{ minHeight: '100vh', background: '#080808', color: '#fff' }}>
     <nav className="page-nav">
   <Link href={`/${locale}`} style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>
-    ← The Unsend Project
+    ← The Unwrite Project
   </Link>
   <LanguageSwitcher currentLocale={locale} />
 </nav>
@@ -88,8 +88,8 @@ export default function FAQPage() {
           <p style={{ fontSize: '1rem', color: 'rgba(255,255,255,0.3)', marginBottom: '1rem' }}>
             Still have questions?
           </p>
-          <a href="mailto:hello@theunsendproject.com" style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#C9956C' }}>
-            hello@theunsendproject.com
+          <a href="mailto:hello@theunwriteproject.com" style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#C9956C' }}>
+            hello@theunwriteproject.com
           </a>
         </div>
       </div>

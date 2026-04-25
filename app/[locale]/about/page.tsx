@@ -9,7 +9,7 @@ export default function AboutPage() {
     <main style={{ minHeight: '100vh', background: '#080808', color: '#fff' }}>
       <nav className="page-nav">
   <Link href={`/${locale}`} style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>
-    ← The Unsend Project
+    ← The Unwrite Project
   </Link>
   <LanguageSwitcher currentLocale={locale} />
 </nav>
@@ -26,7 +26,7 @@ export default function AboutPage() {
           </p>
 
           <p style={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.4)', lineHeight: 1.9 }}>
-            The Unsend Project was built around a simple idea: some messages are too important to send right now. A letter to your child for when they turn 18. A note to yourself for when things get hard. A promise to someone you love, delivered exactly when it matters most.
+            The Unwrite Project was built around a simple idea: some messages are too important to send right now. A letter to your child for when they turn 18. A note to yourself for when things get hard. A promise to someone you love, delivered exactly when it matters most.
           </p>
 
           <p style={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.4)', lineHeight: 1.9 }}>
@@ -42,7 +42,7 @@ export default function AboutPage() {
           <div>
             <p style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.25)', marginBottom: '1rem' }}>made by</p>
             <p style={{ fontSize: '0.95rem', color: 'rgba(255,255,255,0.4)', lineHeight: 1.9 }}>
-              The Unsend Project is built and operated by <strong style={{ color: 'rgba(255,255,255,0.65)' }}>Minglr SRL</strong>, a company based in Romania. We care deeply about privacy, simplicity, and creating products that feel human.
+              The Unwrite Project is built and operated by <strong style={{ color: 'rgba(255,255,255,0.65)' }}>Minglr SRL</strong>, a company based in Romania. We care deeply about privacy, simplicity, and creating products that feel human.
             </p>
           </div>
 
@@ -50,8 +50,8 @@ export default function AboutPage() {
 
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <p style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.25)' }}>contact</p>
-            <a href="mailto:hello@theunsendproject.com" style={{ fontSize: '1rem', color: '#C9956C', fontFamily: "'Cormorant Garamond', serif" }}>
-              hello@theunsendproject.com
+            <a href="mailto:hello@theunwriteproject.com" style={{ fontSize: '1rem', color: '#C9956C', fontFamily: "'Cormorant Garamond', serif" }}>
+              hello@theunwriteproject.com
             </a>
           </div>
 

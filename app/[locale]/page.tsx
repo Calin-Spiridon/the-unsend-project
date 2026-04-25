@@ -54,7 +54,7 @@ export default function HomePage() {
       {/* Nav */}
       <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1.2rem 1.5rem', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
         <span style={{ fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.6)', whiteSpace: 'nowrap' }}>
-          The Unsend Project
+          The Unwrite Project
         </span>
         <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <div className="nav-links" style={{ display: 'flex', gap: '1.2rem' }}>
@@ -72,7 +72,7 @@ export default function HomePage() {
         <div className="animate-fade-in-up delay-1" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: 'rgba(201,149,108,0.08)', border: '1px solid rgba(201,149,108,0.2)', borderRadius: '100px', padding: '8px 20px', marginBottom: '3rem' }}>
           <span style={{ width: '6px', height: '6px', borderRadius: '50%', background: '#C9956C', display: 'inline-block' }} />
           <span style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: '#C9956C' }}>
-            theunsendproject.com
+            theunwriteproject.com
           </span>
         </div>
 
@@ -148,7 +148,7 @@ export default function HomePage() {
       {/* Footer */}
       <footer style={{ borderTop: '1px solid rgba(255,255,255,0.06)', padding: '2.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem' }}>
         <span style={{ fontSize: '11px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.6)' }}>
-          The Unsend Project
+          The Unwrite Project
         </span>
         <p style={{ fontStyle: 'italic', fontSize: '1rem', color: 'rgba(255,255,255,0.5)' }}>
           {t("footer.tagline")}

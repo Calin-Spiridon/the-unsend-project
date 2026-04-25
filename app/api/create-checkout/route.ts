@@ -59,7 +59,7 @@ export async function POST(req: NextRequest) {
           price_data: {
             currency: 'eur',
             product_data: {
-              name: 'The Unsend Project',
+              name: 'The Unwrite Project',
               description: title || 'A sealed message to the future',
             },
             unit_amount: 100,

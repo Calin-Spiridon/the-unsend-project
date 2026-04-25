@@ -93,7 +93,7 @@ input[type="date"], input[type="time"] { width: 100%; max-width: 100%; box-sizin
 
       <nav className="page-nav">
   <Link href={`/${locale}`} style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>
-    ← The Unsend Project
+    ← The Unwrite Project
   </Link>
   <LanguageSwitcher currentLocale={locale} />
 </nav>

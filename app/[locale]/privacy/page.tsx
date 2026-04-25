@@ -9,7 +9,7 @@ export default function PrivacyPage() {
     <main style={{ minHeight: '100vh', background: '#080808', color: '#fff' }}>
       <nav className="page-nav">
   <Link href={`/${locale}`} style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>
-    ← The Unsend Project
+    ← The Unwrite Project
   </Link>
   <LanguageSwitcher currentLocale={locale} />
 </nav>
@@ -36,10 +36,10 @@ export default function PrivacyPage() {
         <div className="legal-section">
           <h2 className="legal-h2">1. Who we are</h2>
           <p className="legal-p">
-            The Unsend Project is operated by <strong style={{ color: 'rgba(255,255,255,0.7)' }}>Minglr SRL</strong>, a company registered in Romania. We operate the website theunsendproject.com and all related services.
+            The Unwrite Project is operated by <strong style={{ color: 'rgba(255,255,255,0.7)' }}>Minglr SRL</strong>, a company registered in Romania. We operate the website theunwriteproject.com and all related services.
           </p>
           <p className="legal-p">
-            Contact: <a href="mailto:hello@theunsendproject.com" style={{ color: 'rgba(201,149,108,0.7)' }}>hello@theunsendproject.com</a>
+            Contact: <a href="mailto:hello@theunwriteproject.com" style={{ color: 'rgba(201,149,108,0.7)' }}>hello@theunwriteproject.com</a>
           </p>
         </div>
 
@@ -92,7 +92,7 @@ export default function PrivacyPage() {
         <div className="legal-section">
           <h2 className="legal-h2">5. Data retention</h2>
           <p className="legal-p">
-            Your capsule and its content are stored indefinitely — the link remains active permanently so the recipient can always return to it. If you wish to delete your capsule and all associated data, contact us at <a href="mailto:hello@theunsendproject.com" style={{ color: 'rgba(201,149,108,0.7)' }}>hello@theunsendproject.com</a> with your capsule token.
+            Your capsule and its content are stored indefinitely — the link remains active permanently so the recipient can always return to it. If you wish to delete your capsule and all associated data, contact us at <a href="mailto:hello@theunwriteproject.com" style={{ color: 'rgba(201,149,108,0.7)' }}>hello@theunwriteproject.com</a> with your capsule token.
           </p>
         </div>
 
@@ -121,7 +121,7 @@ export default function PrivacyPage() {
             <li>Data portability</li>
           </ul>
           <p className="legal-p">
-            To exercise any of these rights, email us at <a href="mailto:hello@theunsendproject.com" style={{ color: 'rgba(201,149,108,0.7)' }}>hello@theunsendproject.com</a>. We will respond within 30 days.
+            To exercise any of these rights, email us at <a href="mailto:hello@theunwriteproject.com" style={{ color: 'rgba(201,149,108,0.7)' }}>hello@theunwriteproject.com</a>. We will respond within 30 days.
           </p>
         </div>
 
