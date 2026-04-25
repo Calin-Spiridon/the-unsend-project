@@ -24,26 +24,26 @@ export default function HomePage() {
     <main style={{ minHeight: '100vh', background: '#080808', color: '#fff', overflowX: 'hidden' }}>
 
       <style>{`
-        .nav-links a { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.35); text-decoration: none; }
+        .nav-links a { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.6); text-decoration: none; }
         .hero-title { font-family: 'Cormorant Garamond', serif; font-weight: 300; line-height: 1.05; font-size: clamp(3.5rem, 9vw, 8rem); letter-spacing: -0.02em; }
-        .hero-sub { font-size: clamp(1rem, 2vw, 1.2rem); color: rgba(255,255,255,0.5); max-width: 480px; line-height: 1.8; font-weight: 300; }
+        .hero-sub { font-size: clamp(1rem, 2vw, 1.2rem); color: rgba(255,255,255,0.75); max-width: 480px; line-height: 1.8; font-weight: 300; }
         .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
         .step-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 2.5rem 2rem; display: flex; flex-direction: column; gap: 1rem; }
-        .step-num { font-size: 11px; color: rgba(201,149,108,0.8); letter-spacing: 0.3em; }
+        .step-num { font-size: 11px; color: rgba(201,149,108,0.9); letter-spacing: 0.3em; }
         .step-title { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; font-weight: 300; color: rgba(255,255,255,0.95); }
-        .step-desc { font-size: 1rem; color: rgba(255,255,255,0.55); line-height: 1.8; }
+        .step-desc { font-size: 1rem; color: rgba(255,255,255,0.75); line-height: 1.8; }
         .mood-pill { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 100px; padding: 10px 20px; }
-        .mood-label { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.65); }
-        .quote-text { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: clamp(2rem, 4vw, 3.8rem); color: rgba(255,255,255,0.2); line-height: 1.4; }
+        .mood-label { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.75); }
+        .quote-text { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: clamp(2rem, 4vw, 3.8rem); color: rgba(255,255,255,0.5); line-height: 1.4; }
         .cta-btn { display: inline-flex; align-items: center; gap: 12px; background: #C9956C; color: #080808; padding: 18px 48px; border-radius: 4px; font-size: 12px; letter-spacing: 0.25em; text-transform: uppercase; text-decoration: none; font-weight: 500; }
-        .cta-sub { font-size: 11px; color: rgba(255,255,255,0.25); letter-spacing: 0.15em; margin-top: 1rem; }
+        .cta-sub { font-size: 11px; color: rgba(255,255,255,0.6); letter-spacing: 0.15em; margin-top: 1rem; }
         .how-section { padding: 6rem 2.5rem; max-width: 1100px; margin: 0 auto; }
         .moods-section { padding: 5rem 2.5rem; border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); }
         .quote-section { padding: 8rem 2.5rem; text-align: center; }
         @media (max-width: 768px) {
           .steps-grid { grid-template-columns: 1fr; gap: 1rem; }
           .step-card { padding: 2rem 1.5rem; }
-          .nav-links { display: none; }
+          .nav-links { display: none !important; }
           .how-section { padding: 3rem 1.5rem; }
           .moods-section { padding: 3rem 1.5rem; }
           .quote-section { padding: 4rem 1.5rem; }
@@ -52,19 +52,19 @@ export default function HomePage() {
       `}</style>
 
       {/* Nav */}
-    <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1.2rem 1.5rem', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
-  <span style={{ fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.5)', whiteSpace: 'nowrap' }}>
-    The Unsend Project
-  </span>
-  <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-    <div style={{ display: 'flex', gap: '1.2rem' }} className="nav-links">
-      <Link href={`/${locale}/create`} style={{ fontSize: '10px', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', whiteSpace: 'nowrap' }}>{t("nav.create")}</Link>
-      <Link href={`/${locale}/track`} style={{ fontSize: '10px', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', whiteSpace: 'nowrap' }}>{t("nav.track")}</Link>
-      <Link href={`/${locale}/about`} style={{ fontSize: '10px', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', whiteSpace: 'nowrap' }}>{t("nav.about")}</Link>
-    </div>
-    <LanguageSwitcher currentLocale={locale} />
-  </div>
-</nav>
+      <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1.2rem 1.5rem', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+        <span style={{ fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.6)', whiteSpace: 'nowrap' }}>
+          The Unsend Project
+        </span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+          <div className="nav-links" style={{ display: 'flex', gap: '1.2rem' }}>
+            <Link href={`/${locale}/track`} style={{ fontSize: '10px', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.6)', whiteSpace: 'nowrap' }}>
+              {t("nav.track")}
+            </Link>
+          </div>
+          <LanguageSwitcher currentLocale={locale} />
+        </div>
+      </nav>
 
       {/* Hero */}
       <section style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '92vh', textAlign: 'center', padding: '4rem 2rem', position: 'relative' }}>
@@ -93,7 +93,8 @@ export default function HomePage() {
           <p className="cta-sub">1€ · encrypted · forever yours</p>
         </div>
 
-        <div style={{ position: 'absolute', bottom: '2.5rem', left: '50%', transform: 'translateX(-50%)' }}>
+        {/* Scroll indicator — between cta-sub and How it works */}
+        <div style={{ position: 'absolute', bottom: '-2rem', left: '50%', transform: 'translateX(-50%)' }}>
           <div style={{ width: '1px', height: '52px', background: 'linear-gradient(to bottom, transparent, rgba(201,149,108,0.4))' }} />
         </div>
       </section>
@@ -101,7 +102,7 @@ export default function HomePage() {
       {/* How it works */}
       <section className="how-section">
         <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
-          <p style={{ fontSize: '11px', letterSpacing: '0.5em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.35)', marginBottom: '1rem' }}>
+          <p style={{ fontSize: '11px', letterSpacing: '0.5em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.6)', marginBottom: '1rem' }}>
             {t("home.how_title")}
           </p>
           <div style={{ width: '40px', height: '1px', background: 'rgba(201,149,108,0.4)', margin: '0 auto' }} />
@@ -123,7 +124,7 @@ export default function HomePage() {
 
       {/* Moods */}
       <section className="moods-section">
-        <p style={{ textAlign: 'center', fontSize: '11px', letterSpacing: '0.5em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)', marginBottom: '3rem' }}>
+        <p style={{ textAlign: 'center', fontSize: '11px', letterSpacing: '0.5em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.6)', marginBottom: '3rem' }}>
           every feeling has a capsule
         </p>
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '1rem', maxWidth: '900px', margin: '0 auto' }}>
@@ -140,16 +141,16 @@ export default function HomePage() {
       <section className="quote-section">
         <p className="quote-text" style={{ maxWidth: '800px', margin: '0 auto' }}>
           "Write it now.<br />
-          <span style={{ color: 'rgba(201,149,108,0.6)' }}>Let it arrive when it matters.</span>"
+          <span style={{ color: 'rgba(201,149,108,0.7)' }}>Let it arrive when it matters.</span>"
         </p>
       </section>
 
       {/* Footer */}
       <footer style={{ borderTop: '1px solid rgba(255,255,255,0.06)', padding: '2.5rem', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '1.5rem' }}>
-        <span style={{ fontSize: '11px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)' }}>
+        <span style={{ fontSize: '11px', letterSpacing: '0.35em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.6)' }}>
           The Unsend Project
         </span>
-        <p style={{ fontStyle: 'italic', fontSize: '1rem', color: 'rgba(255,255,255,0.2)' }}>
+        <p style={{ fontStyle: 'italic', fontSize: '1rem', color: 'rgba(255,255,255,0.5)' }}>
           {t("footer.tagline")}
         </p>
         <div style={{ display: 'flex', gap: '2.5rem', flexWrap: 'wrap', justifyContent: 'center' }}>
@@ -158,7 +159,7 @@ export default function HomePage() {
             { label: t("footer.faq"), href: `/${locale}/faq` },
             { label: t("footer.about"), href: `/${locale}/about` },
           ].map(({ label, href }) => (
-            <Link key={href} href={href} style={{ fontSize: '11px', letterSpacing: '0.25em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.3)' }}>
+            <Link key={href} href={href} style={{ fontSize: '11px', letterSpacing: '0.25em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.6)' }}>
               {label}
             </Link>
           ))}

@@ -15,10 +15,10 @@ const FAQS = [
     q: "Can I send a capsule to someone else?",
     a: "Yes. When creating your capsule, you can choose to send it to another person's email address. They'll receive a notification when it's time to open it."
   },
-  {
-    q: "What if I want to send the link myself instead of by email?",
-    a: "After payment, you'll receive a unique link you can copy and send whenever you're ready — via WhatsApp, iMessage, or any platform you prefer. The link remains active permanently."
-  },
+ {
+  q: "What if I lose my capsule code?",
+  a: "Unfortunately, we cannot recover your capsule code automatically. However, if you contact us at hello@theunsendproject.com with the email address you used when creating the capsule, we can verify your identity and help you locate it. Please note that for privacy reasons, we cannot view or share the content of any message."
+},
   {
     q: "Is my message private?",
     a: "Yes. Your message is stored securely and can only be accessed via its unique token. We never read, share, or use your message content for any purpose other than delivery."
