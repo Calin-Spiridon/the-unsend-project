@@ -157,12 +157,6 @@ export function OpenCapsuleClient({ capsule, locale, translations }: {
 
           <div className="fade-up-3" style={{ display: 'flex', flexDirection: 'column', gap: '1rem', alignItems: 'center' }}>
             <Link
-              href={`/${locale}/create?reply=${capsule.unique_token}`}
-              style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', background: moodColor, color: '#080808', padding: '16px 40px', borderRadius: '4px', fontSize: '11px', letterSpacing: '0.25em', textTransform: 'uppercase', fontWeight: 500, width: '100%' }}
-            >
-              {translations.reply} →
-            </Link>
-            <Link
               href={`/${locale}/create`}
               style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', background: 'transparent', border: '1px solid rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.5)', padding: '16px 40px', borderRadius: '4px', fontSize: '11px', letterSpacing: '0.25em', textTransform: 'uppercase', width: '100%' }}
             >
