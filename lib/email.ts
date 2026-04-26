@@ -32,7 +32,7 @@ export async function sendConfirmationEmail({
   await resend.emails.send({
     from: `${FROM_NAME} <${FROM_EMAIL}>`,
     to,
-    subject: 'Your capsule has been sealed and sent.',
+    subject: to.split('@')[0] + ' — your words are sealed.',
     html: `
 <!DOCTYPE html>
 <html>
@@ -109,22 +109,22 @@ export async function sendOpenEmail({
   const openLink = `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/open/${token}`;
 
   const moodSubjects: Record<string, string> = {
-    love: 'A message of love is waiting for you.',
-    hope: 'Something hopeful was left for you.',
-    regret: 'Someone wanted you to have this.',
-    promise: 'A promise is ready to be kept.',
-    for_kids: 'A letter is waiting for you.',
-    forgive: 'Something was left for you.',
+    love: 'A letter written with love is waiting for you.',
+    hope: 'Someone kept something hopeful for you.',
+    regret: 'A letter from the past found its way to you.',
+    promise: 'A promise made to you is ready.',
+    for_kids: 'Someone wrote you a letter.',
+    forgive: 'Someone wanted you to have this.',
     remember_me: 'Someone wanted you to remember.',
-    gratitude: 'Someone is grateful for you.',
-    courage: 'You have what it takes. Open this.',
-    goodbye: 'Something was left for you.',
-    proud: 'Someone is proud of you.',
+    gratitude: 'Someone thought of you today.',
+    courage: 'Someone believed in you. This is proof.',
+    goodbye: 'A final letter is waiting for you.',
+    proud: 'Someone is proud of you. Read this.',
   };
 
   const subject = mood && moodSubjects[mood]
     ? moodSubjects[mood]
-    : 'Something was left for you.';
+    : 'A letter from your past is waiting.';
 
   await resend.emails.send({
     from: `${FROM_NAME} <${FROM_EMAIL}>`,
