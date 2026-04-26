@@ -76,7 +76,7 @@ export default function CreatePage() {
     <main style={{ minHeight: '100vh', background: '#080808', color: '#fff' }}>
       <style>{`
         .create-container { max-width: 680px; margin: 0 auto; padding: 3rem 1.5rem 5rem; overflow-x: hidden; }
-        .field-label { font-size: 11px; letter-spacing: 0.35em; text-transform: uppercase; color: rgba(255,255,255,0.4); display: block; margin-bottom: 0.875rem; }
+        .field-label { font-size: 11px; letter-spacing: 0.35em; text-transform: uppercase; color: rgba(255,255,255,0.4); display: block; margin-bottom: 0.875rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .text-input { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 16px 18px; color: #fff; font-size: 1.05rem; outline: none; font-family: 'Cormorant Garamond', serif; transition: border-color 0.3s; color-scheme: dark; box-sizing: border-box; }
         .text-input:focus { border-color: rgba(201,149,108,0.5); }
         .text-input::placeholder { color: rgba(255,255,255,0.2); }
@@ -230,28 +230,28 @@ export default function CreatePage() {
         )}
 
         {/* Date + Time */}
-        <div className="date-grid" style={{ marginBottom: '3rem' }}>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <label className="field-label">{t("create.date_label")}</label>
-            <input
-              type="date"
-              className="text-input"
-              value={openDate}
-              onChange={(e) => setOpenDate(e.target.value)}
-              style={{ height: '54px' }}
-            />
-          </div>
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
-            <label className="field-label">{t("create.time_label")}</label>
-            <input
-              type="time"
-              className="text-input"
-              value={openTime}
-              onChange={(e) => setOpenTime(e.target.value)}
-              style={{ height: '54px' }}
-            />
-          </div>
-        </div>
+       <div className="date-grid" style={{ marginBottom: '3rem' }}>
+       <div style={{ display: 'flex', flexDirection: 'column', minWidth: 0 }}>
+          <label className="field-label">{t("create.date_label")}</label>
+       <input
+      type="date"
+      className="text-input"
+      value={openDate}
+      onChange={(e) => setOpenDate(e.target.value)}
+      style={{ height: '54px' }}
+    />
+  </div>
+     <div style={{ display: 'flex', flexDirection: 'column', minWidth: 0 }}>
+    <label className="field-label">{t("create.time_label")}</label>
+    <input
+      type="time"
+      className="text-input"
+      value={openTime}
+      onChange={(e) => setOpenTime(e.target.value)}
+      style={{ height: '54px' }}
+    />
+  </div>
+</div>
 
         {/* CTA */}
         <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '2rem' }}>
