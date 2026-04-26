@@ -38,7 +38,8 @@
     "recipient_label": "Pentru cine este?",
     "recipient_self": "Pentru mine",
     "recipient_other": "Pentru altcineva",
-    "email_label": "Adresa lor de email",
+    "recipient_placeholder": "destinatar@email.com",
+    "email_label": "Adresa de email a destinatarului",
     "your_email_label": "Adresa ta de email",
     "date_label": "Când să se deschidă?",
     "time_label": "La ce oră?",
@@ -50,7 +51,7 @@
     "next": "Continuă",
     "pay": "Sigilează-l cu 1€",
     "pay_desc": "Mesajul tău va fi criptat și păstrat în siguranță până în momentul ales.",
-    "sender_name_label": "De la (opțional)",
+    "sender_name_label": "De la",
     "sender_name_placeholder": "Semnează cum simți"
   },
   "sealed": {

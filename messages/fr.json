@@ -38,7 +38,8 @@
     "recipient_label": "Pour qui est-ce?",
     "recipient_self": "Pour moi",
     "recipient_other": "Pour quelqu'un d'autre",
-    "email_label": "Leur adresse email",
+    "recipient_placeholder": "destinataire@email.com",
+    "email_label": "Adresse email du destinataire",
     "your_email_label": "Votre adresse email",
     "date_label": "Quand doit-il s'ouvrir?",
     "time_label": "À quelle heure?",
@@ -50,7 +51,7 @@
     "next": "Continuer",
     "pay": "Sceller pour 1€",
     "pay_desc": "Votre message sera chiffré et conservé en sécurité jusqu'au moment choisi.",
-    "sender_name_label": "De (facultatif)",
+    "sender_name_label": "De",
     "sender_name_placeholder": "Signez comme bon vous semble"
   },
   "sealed": {

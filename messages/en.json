@@ -38,7 +38,8 @@
     "recipient_label": "Who is this for?",
     "recipient_self": "For me",
     "recipient_other": "For someone else",
-    "email_label": "Their email address",
+    "recipient_placeholder": "recipient@email.com",
+    "email_label": "Recipient's email address",
     "your_email_label": "Your email address",
     "date_label": "When should it open?",
     "time_label": "At what time?",
@@ -50,7 +51,7 @@
     "next": "Continue",
     "pay": "Seal it for €1",
     "pay_desc": "Your message will be encrypted and kept safe until the moment you chose.",
-    "sender_name_label": "From (optional)",
+    "sender_name_label": "From",
     "sender_name_placeholder": "Sign it however feels right"
   },
   "sealed": {

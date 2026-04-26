@@ -37,7 +37,7 @@ export default function CreatePage() {
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async () => {
-    if (!message || !senderEmail || !openDate || !openTime || (recipient === 'other' && !recipientEmail)) {
+    if (!message || !senderEmail || !openDate || !openTime || (recipient === 'other' && !recipientEmail) || (recipient === 'other' && !senderName)) {
       alert('Please fill in all required fields.');
       return;
     }
@@ -92,12 +92,12 @@ export default function CreatePage() {
         .char-counter { font-size: 11px; letter-spacing: 0.1em; transition: color 0.3s; }
       `}</style>
 
-      <nav className="page-nav">
-        <Link href={`/${locale}`} style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>
-          ← The Unwrite Project
-        </Link>
-        <LanguageSwitcher currentLocale={locale} />
-      </nav>
+      <nav className="page-nav" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '1.2rem 1.5rem', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+  <Link href={`/${locale}`} style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>
+    ← The Unwrite Project
+  </Link>
+  <LanguageSwitcher currentLocale={locale} />
+</nav>
 
       <div className="create-container">
 
@@ -190,44 +190,51 @@ export default function CreatePage() {
           </div>
         </div>
 
-        {/* Sender name */}
-        <div style={{ marginBottom: '1.5rem' }}>
-          <label className="field-label">{t("create.sender_name_label")}</label>
-          <input
-            type="text"
-            className="text-input"
-            placeholder={t("create.sender_name_placeholder")}
-            maxLength={60}
-            value={senderName}
-            onChange={(e) => setSenderName(e.target.value)}
-          />
-        </div>
+        {/* Sender name — only for someone else */}
+{recipient === 'other' && (
+  <div style={{ marginBottom: '1.5rem' }}>
+    <label className="field-label">{t("create.sender_name_label")}</label>
+    <input
+      type="text"
+      className="text-input"
+      placeholder={t("create.sender_name_placeholder")}
+      maxLength={60}
+      value={senderName}
+      onChange={(e) => setSenderName(e.target.value)}
+    />
+  </div>
+)}
 
         {/* Sender email */}
-        <div style={{ marginBottom: '1.5rem' }}>
-          <label className="field-label">{t("create.your_email_label")}</label>
-          <input
-            type="email"
-            className="text-input"
-            placeholder="your@email.com"
-            value={senderEmail}
-            onChange={(e) => setSenderEmail(e.target.value)}
-          />
-        </div>
+<div style={{ marginBottom: '1.5rem' }}>
+  <label className="field-label">{t("create.your_email_label")}</label>
+  <input
+    type="email"
+    className="text-input"
+    placeholder="your@email.com"
+    value={senderEmail}
+    autoComplete="email"
+    name="sender-email"
+    onChange={(e) => setSenderEmail(e.target.value)}
+  />
+</div>
 
-        {/* Recipient email — only if other */}
-        {recipient === 'other' && (
-          <div style={{ marginBottom: '1.5rem' }}>
-            <label className="field-label">{t("create.email_label")}</label>
-            <input
-              type="email"
-              className="text-input"
-              placeholder="their@email.com"
-              value={recipientEmail}
-              onChange={(e) => setRecipientEmail(e.target.value)}
-            />
-          </div>
-        )}
+{/* Recipient email — only if other */}
+{recipient === 'other' && (
+  <div style={{ marginBottom: '1.5rem' }}>
+    <label className="field-label">{t("create.email_label")}</label>
+    <input
+      type="text"
+      inputMode="email"
+      className="text-input"
+      placeholder={t("create.recipient_placeholder")}
+      value={recipientEmail}
+      autoComplete="new-password"
+      name="recipient-email"
+      onChange={(e) => setRecipientEmail(e.target.value)}
+    />
+  </div>
+)}
 
         {/* Date + Time */}
        <div className="date-grid" style={{ marginBottom: '3rem' }}>

@@ -38,7 +38,8 @@
     "recipient_label": "Für wen ist das?",
     "recipient_self": "Für mich",
     "recipient_other": "Für jemand anderen",
-    "email_label": "Ihre E-Mail-Adresse",
+    "recipient_placeholder": "empfaenger@email.com",
+    "email_label": "E-Mail-Adresse des Empfängers",
     "your_email_label": "Deine E-Mail-Adresse",
     "date_label": "Wann soll es geöffnet werden?",
     "time_label": "Um wie viel Uhr?",
@@ -50,7 +51,7 @@
     "next": "Weiter",
     "pay": "Für 1€ versiegeln",
     "pay_desc": "Deine Nachricht wird verschlüsselt und sicher aufbewahrt bis zum gewählten Moment.",
-    "sender_name_label": "Von (optional)",
+    "sender_name_label": "Von",
     "sender_name_placeholder": "Unterschreibe wie es sich richtig anfühlt"
   },
   "sealed": {

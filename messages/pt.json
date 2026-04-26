@@ -38,7 +38,8 @@
     "recipient_label": "Para quem é?",
     "recipient_self": "Para mim",
     "recipient_other": "Para outra pessoa",
-    "email_label": "O endereço de email deles",
+    "recipient_placeholder": "destinatario@email.com",
+    "email_label": "Endereço de email do destinatário",
     "your_email_label": "Seu endereço de email",
     "date_label": "Quando deve abrir?",
     "time_label": "A que horas?",
@@ -50,7 +51,7 @@
     "next": "Continuar",
     "pay": "Selar por 1€",
     "pay_desc": "Sua mensagem será criptografada e mantida segura até o momento escolhido.",
-    "sender_name_label": "De (opcional)",
+    "sender_name_label": "De",
     "sender_name_placeholder": "Assine como sentir certo"
   },
   "sealed": {
