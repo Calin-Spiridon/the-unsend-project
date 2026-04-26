@@ -82,9 +82,8 @@ export default function CreatePage() {
         .recipient-btn.active { border-color: #C9956C; color: #C9956C; background: rgba(201,149,108,0.08); }
         .mood-pill { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 100px; padding: 10px 18px; cursor: pointer; transition: all 0.3s; }
         .mood-pill.active { border-color: rgba(201,149,108,0.6); background: rgba(201,149,108,0.08); }
-        .date-grid { display: grid; grid-template-columns: 1fr; gap: 0.75rem; width: 100%; }
-@media (min-width: 640px) { .date-grid { grid-template-columns: 1fr 1fr; } }
-input[type="date"], input[type="time"] { width: 100%; max-width: 100%; box-sizing: border-box; overflow: hidden; }
+       .date-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; width: 100%; }
+        input[type="date"], input[type="time"] { width: 100%; max-width: 100%; box-sizing: border-box; overflow: hidden; appearance: none; -webkit-appearance: none; }
         .seal-btn { width: 100%; background: #C9956C; color: #080808; padding: 20px; border-radius: 4px; border: none; cursor: pointer; font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 500; font-family: 'Cormorant Garamond', serif; transition: opacity 0.3s; }
         .seal-btn:hover { opacity: 0.88; }
         .seal-btn:disabled { cursor: not-allowed; }
