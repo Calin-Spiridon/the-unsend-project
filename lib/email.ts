@@ -20,15 +20,19 @@ export async function sendConfirmationEmail({
 }) {
   const date = new Date(openDate);
   const formatted = date.toLocaleDateString('en-GB', {
-    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
+    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+    timeZone: 'Europe/Bucharest'
   });
-  const time = date.toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' });
+  const time = date.toLocaleTimeString('en-GB', { 
+    hour: '2-digit', minute: '2-digit',
+    timeZone: 'Europe/Bucharest'
+  });
   const openLink = `${process.env.NEXT_PUBLIC_BASE_URL}/${locale}/open/${token}`;
 
   await resend.emails.send({
     from: `${FROM_NAME} <${FROM_EMAIL}>`,
     to,
-    subject: 'Your message is sealed.',
+    subject: 'Your capsule has been sealed and sent.',
     html: `
 <!DOCTYPE html>
 <html>
@@ -41,7 +45,7 @@ export async function sendConfirmationEmail({
     <tr>
       <td align="center">
         <table width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;">
-          
+
           <!-- Header -->
           <tr>
             <td style="padding:40px 0 20px;text-align:center;border-bottom:1px solid rgba(255,255,255,0.06);">
@@ -51,66 +55,28 @@ export async function sendConfirmationEmail({
             </td>
           </tr>
 
-          <!-- Seal icon -->
+          <!-- Main -->
           <tr>
-            <td style="padding:50px 0 20px;text-align:center;">
-              <div style="width:70px;height:70px;border-radius:50%;border:1px solid rgba(201,149,108,0.3);background:rgba(201,149,108,0.06);margin:0 auto;display:flex;align-items:center;justify-content:center;">
-                <p style="margin:0;font-size:28px;color:#C9956C;">◈</p>
-              </div>
-            </td>
-          </tr>
-
-          <!-- Title -->
-          <tr>
-            <td style="padding:10px 40px 0;text-align:center;">
-              <p style="margin:0 0 8px;font-size:11px;letter-spacing:0.4em;text-transform:uppercase;color:rgba(201,149,108,0.7);">sealed</p>
-              <h1 style="margin:0 0 20px;font-size:36px;font-weight:300;line-height:1.2;color:#ffffff;">
-                Your message is sealed.
+            <td style="padding:60px 40px 30px;text-align:center;">
+              <h1 style="margin:0 0 20px;font-size:40px;font-weight:300;line-height:1.2;color:#ffffff;">
+                Your capsule has been<br>sealed and sent.
               </h1>
-              ${capsuleTitle ? `<p style="margin:0 0 16px;font-size:18px;font-style:italic;color:rgba(255,255,255,0.5);">"${capsuleTitle}"</p>` : ''}
-              <p style="margin:0 0 8px;font-size:14px;color:rgba(255,255,255,0.35);line-height:1.6;">
-                It will be waiting on
+              ${capsuleTitle ? `<p style="margin:0 0 30px;font-size:18px;font-style:italic;color:rgba(255,255,255,0.4);">"${capsuleTitle}"</p>` : ''}
+              <p style="margin:0 0 8px;font-size:14px;color:rgba(255,255,255,0.35);line-height:1.8;">
+                It will be delivered on
               </p>
-              <p style="margin:0;font-size:20px;font-style:italic;color:#C9956C;">
+              <p style="margin:0 0 40px;font-size:20px;font-style:italic;color:#C9956C;">
                 ${formatted} at ${time}
               </p>
-            </td>
-          </tr>
-
-          <!-- Divider -->
-          <tr>
-            <td style="padding:30px 40px;">
-              <div style="width:40px;height:1px;background:rgba(255,255,255,0.1);margin:0 auto;"></div>
-            </td>
-          </tr>
-
-          <!-- Info box -->
-          <tr>
-            <td style="padding:0 40px 30px;">
-              <div style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:24px;">
-                <p style="margin:0;font-size:14px;color:rgba(255,255,255,0.35);line-height:1.8;text-align:center;">
-                  We'll send a notification when it's time to open it.<br>
-                  Or share the link below whenever you're ready.
-                </p>
-              </div>
-            </td>
-          </tr>
-
-          <!-- Link -->
-          <tr>
-            <td style="padding:0 40px 40px;text-align:center;">
-              <p style="margin:0 0 16px;font-size:10px;letter-spacing:0.3em;text-transform:uppercase;color:rgba(255,255,255,0.25);">
-                your capsule link
-              </p>
-              <a href="${openLink}" style="display:block;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.1);border-radius:8px;padding:14px 20px;font-family:monospace;font-size:11px;color:rgba(201,149,108,0.7);text-decoration:none;word-break:break-all;">
-                ${openLink}
+              <a href="${openLink}" style="display:inline-block;background:#C9956C;color:#080808;padding:18px 48px;border-radius:4px;font-size:12px;letter-spacing:0.25em;text-transform:uppercase;font-weight:500;text-decoration:none;">
+                View your capsule →
               </a>
             </td>
           </tr>
 
           <!-- Footer -->
           <tr>
-            <td style="padding:30px 40px;text-align:center;border-top:1px solid rgba(255,255,255,0.05);">
+            <td style="padding:40px;text-align:center;border-top:1px solid rgba(255,255,255,0.05);">
               <p style="margin:0;font-size:11px;color:rgba(255,255,255,0.15);font-style:italic;">
                 Some words deserve to wait.
               </p>

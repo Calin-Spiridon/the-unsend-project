@@ -36,7 +36,7 @@ export default function CreatePage() {
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async () => {
-    if (!message || !senderEmail || !openDate || !openTime) {
+    if (!message || !senderEmail || !openDate || !openTime || (recipient === 'other' && !recipientEmail)) {
       alert('Please fill in all required fields.');
       return;
     }
