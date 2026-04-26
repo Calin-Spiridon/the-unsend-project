@@ -49,7 +49,9 @@
     "title_placeholder": "Para cuando necesites fuerza...",
     "next": "Continuar",
     "pay": "Séllalo por 1€",
-    "pay_desc": "Tu mensaje será cifrado y guardado de forma segura hasta el momento elegido."
+    "pay_desc": "Tu mensaje será cifrado y guardado de forma segura hasta el momento elegido.",
+    "sender_name_label": "De (opcional)",
+    "sender_name_placeholder": "Fírmalo como sientas"
   },
   "sealed": {
     "title": "Tu mensaje está sellado.",

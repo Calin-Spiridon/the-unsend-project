@@ -49,7 +49,9 @@
     "title_placeholder": "Para quando precisar de força...",
     "next": "Continuar",
     "pay": "Selar por 1€",
-    "pay_desc": "Sua mensagem será criptografada e mantida segura até o momento escolhido."
+    "pay_desc": "Sua mensagem será criptografada e mantida segura até o momento escolhido.",
+    "sender_name_label": "De (opcional)",
+    "sender_name_placeholder": "Assine como sentir certo"
   },
   "sealed": {
     "title": "Sua mensagem está selada.",

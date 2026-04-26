@@ -29,6 +29,7 @@ export default function CreatePage() {
   const [messageLength, setMessageLength] = useState(0);
   const [title, setTitle] = useState('');
   const [titleLength, setTitleLength] = useState(0);
+  const [senderName, setSenderName] = useState('');
   const [senderEmail, setSenderEmail] = useState('');
   const [recipientEmail, setRecipientEmail] = useState('');
   const [openDate, setOpenDate] = useState('');
@@ -50,6 +51,7 @@ export default function CreatePage() {
           message_text: message,
           title: title || undefined,
           mood: selectedMood || undefined,
+          sender_name: senderName || undefined,
           recipient_email: recipient === 'self' ? senderEmail : recipientEmail,
           sender_email: senderEmail,
           open_date: openDateTime,
@@ -82,7 +84,7 @@ export default function CreatePage() {
         .recipient-btn.active { border-color: #C9956C; color: #C9956C; background: rgba(201,149,108,0.08); }
         .mood-pill { display: flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 100px; padding: 10px 18px; cursor: pointer; transition: all 0.3s; }
         .mood-pill.active { border-color: rgba(201,149,108,0.6); background: rgba(201,149,108,0.08); }
-       .date-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; width: 100%; align-items: end; }
+        .date-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; width: 100%; align-items: end; }
         input[type="date"], input[type="time"] { width: 100%; max-width: 100%; box-sizing: border-box; overflow: hidden; appearance: none; -webkit-appearance: none; }
         .seal-btn { width: 100%; background: #C9956C; color: #080808; padding: 20px; border-radius: 4px; border: none; cursor: pointer; font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; font-weight: 500; font-family: 'Cormorant Garamond', serif; transition: opacity 0.3s; }
         .seal-btn:hover { opacity: 0.88; }
@@ -91,11 +93,11 @@ export default function CreatePage() {
       `}</style>
 
       <nav className="page-nav">
-  <Link href={`/${locale}`} style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>
-    ← The Unwrite Project
-  </Link>
-  <LanguageSwitcher currentLocale={locale} />
-</nav>
+        <Link href={`/${locale}`} style={{ fontSize: '11px', letterSpacing: '0.3em', textTransform: 'uppercase', color: 'rgba(255,255,255,0.4)' }}>
+          ← The Unwrite Project
+        </Link>
+        <LanguageSwitcher currentLocale={locale} />
+      </nav>
 
       <div className="create-container">
 
@@ -188,6 +190,19 @@ export default function CreatePage() {
           </div>
         </div>
 
+        {/* Sender name */}
+        <div style={{ marginBottom: '1.5rem' }}>
+          <label className="field-label">{t("create.sender_name_label")}</label>
+          <input
+            type="text"
+            className="text-input"
+            placeholder={t("create.sender_name_placeholder")}
+            maxLength={60}
+            value={senderName}
+            onChange={(e) => setSenderName(e.target.value)}
+          />
+        </div>
+
         {/* Sender email */}
         <div style={{ marginBottom: '1.5rem' }}>
           <label className="field-label">{t("create.your_email_label")}</label>
@@ -216,27 +231,27 @@ export default function CreatePage() {
 
         {/* Date + Time */}
         <div className="date-grid" style={{ marginBottom: '3rem' }}>
-  <div style={{ display: 'flex', flexDirection: 'column' }}>
-    <label className="field-label">{t("create.date_label")}</label>
-    <input
-      type="date"
-      className="text-input"
-      value={openDate}
-      onChange={(e) => setOpenDate(e.target.value)}
-      style={{ height: '54px' }}
-    />
-  </div>
-  <div style={{ display: 'flex', flexDirection: 'column' }}>
-    <label className="field-label">{t("create.time_label")}</label>
-    <input
-      type="time"
-      className="text-input"
-      value={openTime}
-      onChange={(e) => setOpenTime(e.target.value)}
-      style={{ height: '54px' }}
-    />
-  </div>
-</div>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <label className="field-label">{t("create.date_label")}</label>
+            <input
+              type="date"
+              className="text-input"
+              value={openDate}
+              onChange={(e) => setOpenDate(e.target.value)}
+              style={{ height: '54px' }}
+            />
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <label className="field-label">{t("create.time_label")}</label>
+            <input
+              type="time"
+              className="text-input"
+              value={openTime}
+              onChange={(e) => setOpenTime(e.target.value)}
+              style={{ height: '54px' }}
+            />
+          </div>
+        </div>
 
         {/* CTA */}
         <div style={{ borderTop: '1px solid rgba(255,255,255,0.06)', paddingTop: '2rem' }}>

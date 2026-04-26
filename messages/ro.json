@@ -49,7 +49,9 @@
     "title_placeholder": "Pentru când o să ai nevoie de putere...",
     "next": "Continuă",
     "pay": "Sigilează-l cu 1€",
-    "pay_desc": "Mesajul tău va fi criptat și păstrat în siguranță până în momentul ales."
+    "pay_desc": "Mesajul tău va fi criptat și păstrat în siguranță până în momentul ales.",
+    "sender_name_label": "De la (opțional)",
+    "sender_name_placeholder": "Semnează cum simți"
   },
   "sealed": {
     "title": "Mesajul tău este sigilat.",

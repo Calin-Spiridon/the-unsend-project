@@ -49,7 +49,9 @@
     "title_placeholder": "For when you need strength...",
     "next": "Continue",
     "pay": "Seal it for €1",
-    "pay_desc": "Your message will be encrypted and kept safe until the moment you chose."
+    "pay_desc": "Your message will be encrypted and kept safe until the moment you chose.",
+    "sender_name_label": "From (optional)",
+    "sender_name_placeholder": "Sign it however feels right"
   },
   "sealed": {
     "title": "Your message is sealed.",

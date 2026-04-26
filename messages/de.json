@@ -49,7 +49,9 @@
     "title_placeholder": "Für wenn du Stärke brauchst...",
     "next": "Weiter",
     "pay": "Für 1€ versiegeln",
-    "pay_desc": "Deine Nachricht wird verschlüsselt und sicher aufbewahrt bis zum gewählten Moment."
+    "pay_desc": "Deine Nachricht wird verschlüsselt und sicher aufbewahrt bis zum gewählten Moment.",
+    "sender_name_label": "Von (optional)",
+    "sender_name_placeholder": "Unterschreibe wie es sich richtig anfühlt"
   },
   "sealed": {
     "title": "Deine Nachricht ist versiegelt.",

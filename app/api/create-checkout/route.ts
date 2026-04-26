@@ -7,12 +7,13 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
 
 export async function POST(req: NextRequest) {
   try {
-    const body: CreateCapsuleInput & { locale: string } = await req.json();
+    const body: CreateCapsuleInput & { locale: string; sender_name?: string } = await req.json();
 
     const {
       message_text,
       title,
       mood,
+      sender_name,
       recipient_email,
       sender_email,
       open_date,
@@ -33,6 +34,7 @@ export async function POST(req: NextRequest) {
         message_text,
         title: title || null,
         mood: mood || null,
+        sender_name: sender_name || null,
         recipient_email,
         sender_email,
         open_date,
@@ -52,7 +54,7 @@ export async function POST(req: NextRequest) {
       );
     }
 
-   const session = await stripe.checkout.sessions.create({
+    const session = await stripe.checkout.sessions.create({
       payment_method_types: ['card'],
       customer_email: sender_email,
       line_items: [

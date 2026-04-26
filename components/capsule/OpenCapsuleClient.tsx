@@ -29,6 +29,7 @@ export function OpenCapsuleClient({ capsule, locale, translations }: {
     title: string | null;
     mood: string | null;
     sender_email: string;
+    sender_name: string | null;
     open_date: string;
     unique_token: string;
   };
@@ -134,6 +135,11 @@ export function OpenCapsuleClient({ capsule, locale, translations }: {
               <h1 style={{ fontFamily: "'Cormorant Garamond', serif", fontWeight: 300, fontSize: 'clamp(2rem, 5vw, 3.5rem)', lineHeight: 1.1, marginBottom: '1rem', color: 'rgba(255,255,255,0.9)' }}>
                 {capsule.title}
               </h1>
+            )}
+            {(capsule.sender_name || capsule.sender_email) && (
+              <p style={{ fontSize: '11px', color: 'rgba(255,255,255,0.3)', letterSpacing: '0.3em', textTransform: 'uppercase', marginBottom: '0.5rem' }}>
+                {translations.from} {capsule.sender_name || capsule.sender_email}
+              </p>
             )}
             <p style={{ fontSize: '11px', color: 'rgba(255,255,255,0.25)', letterSpacing: '0.3em', textTransform: 'uppercase' }}>
               {translations.written_on} {formattedDate}

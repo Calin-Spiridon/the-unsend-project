@@ -49,7 +49,9 @@
     "title_placeholder": "Per quando avrai bisogno di forza...",
     "next": "Continua",
     "pay": "Sigillalo per 1€",
-    "pay_desc": "Il tuo messaggio sarà crittografato e conservato al sicuro fino al momento scelto."
+    "pay_desc": "Il tuo messaggio sarà crittografato e conservato al sicuro fino al momento scelto.",
+    "sender_name_label": "Da (opzionale)",
+    "sender_name_placeholder": "Firmalo come senti"
   },
   "sealed": {
     "title": "Il tuo messaggio è sigillato.",

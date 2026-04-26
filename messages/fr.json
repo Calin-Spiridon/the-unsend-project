@@ -49,7 +49,9 @@
     "title_placeholder": "Pour quand vous aurez besoin de force...",
     "next": "Continuer",
     "pay": "Sceller pour 1€",
-    "pay_desc": "Votre message sera chiffré et conservé en sécurité jusqu'au moment choisi."
+    "pay_desc": "Votre message sera chiffré et conservé en sécurité jusqu'au moment choisi.",
+    "sender_name_label": "De (facultatif)",
+    "sender_name_placeholder": "Signez comme bon vous semble"
   },
   "sealed": {
     "title": "Votre message est scellé.",

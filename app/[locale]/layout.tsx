@@ -7,6 +7,10 @@ export const metadata: Metadata = {
   title: "The Unwrite Project — Some words deserve to wait.",
   description:
     "Write something real. Seal it. It arrives exactly when it should.",
+  icons: {
+    icon: '/favicon.ico',
+    apple: '/apple-touch-icon.png',
+  },
 };
 
 export const viewport: Viewport = {
