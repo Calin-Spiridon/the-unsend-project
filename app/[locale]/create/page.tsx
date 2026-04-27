@@ -77,6 +77,8 @@ export default function CreatePage() {
       <style>{`
         .create-container { max-width: 680px; margin: 0 auto; padding: 3rem 1.5rem 5rem; overflow-x: hidden; }
         .field-label { font-size: 11px; letter-spacing: 0.35em; text-transform: uppercase; color: rgba(255,255,255,0.4); display: block; margin-bottom: 0.875rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.date-grid .field-label { font-size: 9px; letter-spacing: 0.2em; }
+@media (max-width: 400px) { .date-grid .field-label { font-size: 8px; letter-spacing: 0.15em; } }
         .text-input { width: 100%; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 16px 18px; color: #fff; font-size: 1.05rem; outline: none; font-family: 'Cormorant Garamond', serif; transition: border-color 0.3s; color-scheme: dark; box-sizing: border-box; }
         .text-input:focus { border-color: rgba(201,149,108,0.5); }
         .text-input::placeholder { color: rgba(255,255,255,0.2); }
