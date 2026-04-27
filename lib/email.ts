@@ -169,14 +169,17 @@ export async function sendOpenEmail({
             </td>
           </tr>
 
-          <!-- Footer -->
-          <tr>
-            <td style="padding:40px;text-align:center;border-top:1px solid rgba(255,255,255,0.05);">
-              <p style="margin:0;font-size:11px;color:rgba(255,255,255,0.15);font-style:italic;">
-                Some words deserve to wait.
-              </p>
-            </td>
-          </tr>
+        <!-- Footer -->
+<tr>
+  <td style="padding:40px;text-align:center;border-top:1px solid rgba(255,255,255,0.05);">
+    <p style="margin:0 0 12px;font-size:11px;color:rgba(255,255,255,0.15);font-style:italic;">
+      Some words deserve to wait.
+    </p>
+    <p style="margin:0;font-size:11px;color:rgba(255,255,255,0.1);line-height:1.6;">
+      If you were not expecting this message, you can safely ignore it.
+    </p>
+  </td>
+</tr>
 
         </table>
       </td>
