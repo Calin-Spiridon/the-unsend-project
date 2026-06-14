@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
+import { trackBeginCheckout } from "@/lib/analytics";
 import Link from "next/link";
 import { LanguageSwitcher } from "@/components/ui/LanguageSwitcher";
 
@@ -73,6 +74,7 @@ export default function CreatePage() {
       const data = await res.json();
 
       if (data.url) {
+        trackBeginCheckout();
         window.location.href = data.url;
       } else {
         alert("Something went wrong. Please try again.");

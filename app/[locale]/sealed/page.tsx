@@ -4,6 +4,7 @@ import { getLocale, getTranslations } from 'next-intl/server';
 import { CopyLinkButton } from '@/components/ui/CopyLinkButton';
 import { LanguageSwitcher } from '@/components/ui/LanguageSwitcher';
 import { LocalDate } from '@/components/ui/LocalDate';
+import { TrackPurchase } from '@/components/ui/TrackPurchase';
 
 export default async function SealedPage({
   searchParams,
@@ -40,6 +41,7 @@ export default async function SealedPage({
 
   return (
     <main style={{ minHeight: '100vh', background: '#080808', color: '#fff' }}>
+      <TrackPurchase token={token} />
       <style>{`
         @keyframes sealIn {
           from { opacity: 0; transform: scale(0.95) translateY(20px); }
